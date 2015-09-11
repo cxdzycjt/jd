@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6bfdd1ca-3e89-4c72-84db-0085237b71c9" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/libs/Pagination.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/controllers/SupplierController.php" afterPath="$PROJECT_DIR$/basic/controllers/SupplierController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/views/supplier/edit.php" afterPath="$PROJECT_DIR$/basic/views/supplier/edit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/views/supplier/index.php" afterPath="$PROJECT_DIR$/basic/views/supplier/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/models/supplier.php" afterPath="$PROJECT_DIR$/basic/models/supplier.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/config/web.php" afterPath="$PROJECT_DIR$/basic/config/web.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="6bfdd1ca-3e89-4c72-84db-0085237b71c9" name="默认的" comment="" />
     <ignored path="jd.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SupplierController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SupplierController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/basic/controllers/SupplierController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="71" selection-start="718" selection-end="718" vertical-scroll-proportion="-11.764706" vertical-offset="125" max-vertical-offset="1875">
+            <state line="26" column="31" selection-start="678" selection-end="678" vertical-scroll-proportion="0.48435172" vertical-offset="200" max-vertical-offset="1875">
               <folding>
                 <element signature="e#123#147#0" expanded="true" />
               </folding>
@@ -63,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basic/views/supplier/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="47" selection-start="1679" selection-end="1686" vertical-scroll-proportion="0.6352584" vertical-offset="482" max-vertical-offset="1200">
+            <state line="36" column="47" selection-start="1679" selection-end="1686" vertical-scroll-proportion="-12.294118" vertical-offset="482" max-vertical-offset="1200">
               <folding>
                 <marker date="1441986911074" expanded="true" signature="732:808" placeholder="..." />
                 <marker date="1441986911074" expanded="true" signature="1244:1473" placeholder="..." />
@@ -501,15 +493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic/controllers/SupplierController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="71" selection-start="718" selection-end="718" vertical-scroll-proportion="-11.764706" vertical-offset="125" max-vertical-offset="1875">
-          <folding>
-            <element signature="e#123#147#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basic/config/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="20" selection-start="744" selection-end="744" vertical-scroll-proportion="0.5319149" vertical-offset="200" max-vertical-offset="1825">
@@ -533,13 +516,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/basic/views/supplier/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="47" selection-start="1679" selection-end="1686" vertical-scroll-proportion="0.6352584" vertical-offset="482" max-vertical-offset="1200">
+        <state line="36" column="47" selection-start="1679" selection-end="1686" vertical-scroll-proportion="-12.294118" vertical-offset="482" max-vertical-offset="1200">
           <folding>
             <marker date="1441986911074" expanded="true" signature="732:808" placeholder="..." />
             <marker date="1441986911074" expanded="true" signature="1244:1473" placeholder="..." />
             <marker date="1441986911074" expanded="true" signature="1535:1663" placeholder="..." />
             <marker date="1441986911074" expanded="true" signature="1596:1663" placeholder="..." />
             <marker date="1441986911074" expanded="true" signature="1637:1663" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/controllers/SupplierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="31" selection-start="678" selection-end="678" vertical-scroll-proportion="0.48435172" vertical-offset="200" max-vertical-offset="1875">
+          <folding>
+            <element signature="e#123#147#0" expanded="true" />
           </folding>
         </state>
       </provider>
