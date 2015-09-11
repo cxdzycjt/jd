@@ -16,6 +16,10 @@ class GoodsController extends Controller{
     public $layout='admin';
 
     public function actionIndex(){
+        $view = Yii::$app->view;
+        $view->params['layoutData']='添加商品';
+        $view->params['controller']='goods';
+        $view->params['action']='edit';
       return $this->render('index');
     }
 
@@ -24,6 +28,10 @@ class GoodsController extends Controller{
         if($app->isPost){
 
         }else{
+            $view = Yii::$app->view;
+            $view->params['layoutData']='商品列表';
+            $view->params['controller']='goods';
+            $view->params['action']='index';
             return $this->render('edit');
         }
     }

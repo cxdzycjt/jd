@@ -2,148 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bfdd1ca-3e89-4c72-84db-0085237b71c9" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/225-54.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/8800_110.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/Account_32-2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/LOGO2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/ads03.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/ajax_loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/area_link.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/arrow.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/arrow_left.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/arrow_right.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/arrowhead.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/bag_close.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/bag_open.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/banner0.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/banner1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/banner2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/base.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/base1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/basebg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/basetbb.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/basetbg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/basetbg1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/bg_repx.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/bgx.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/book_open.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/brand.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/brand_1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/btn_close.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/btn_drop.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/btn_maximize.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/btn_minimize.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/button_bg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/by_top.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/cart.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/close.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/closeIcon.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/color_selecter.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/confirm.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/detail_botbg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/detail_footer.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/detail_header.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/dot.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/ecshop_logo.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/empty.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/error.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/filecheck.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/help03.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/help06.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/home.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/home_1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_account.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_add.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_copy.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_docs.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_drop.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_edit.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_js.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_output.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_priv.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_search.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_send_bonus.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_title.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_trash.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_view.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/img_ser.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/infoheader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/information.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/line.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/line_1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/login.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/login03.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/login_line.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/logo.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/logo21.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/lowerbody.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/member_shop.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/menu_arrow.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/menu_minus.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/menu_plus.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/message.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/nav_03.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/nav_06.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/new.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/new_1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/no.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/notice.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/num.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/online.swf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/online.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/picb.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/picb2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/picb_hs.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/picc.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/picflag.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/picnoflag.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/sale.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/sale_1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/shop_tel.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/sort_asc.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/sort_desc.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/stepnum.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/succ.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/tel1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/tel2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/th_bg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/top_icon.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/top_loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/top_min.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/typedot.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/typehome.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/typehome_1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/warning.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/warning_small.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/yes.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/controllers/BrandController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/controllers/CategoryController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/layouts/admin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/js/common.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/brand/edit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/goods/edit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/css/general.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/js/global.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/css/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/brand/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/category/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/goods/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/js/jquery-1.8.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/css/member.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/css/message.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/css/other.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/css/topic.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/js/transport.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/js/utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/models/Brand.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/models/Category.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/models/Goods.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/controllers/LoginController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/models/Supplier.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/controllers/SupplierController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/category/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/supplier/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/supplier/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/login/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/controllers/BrandController.php" afterPath="$PROJECT_DIR$/basic/controllers/BrandController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/controllers/CategoryController.php" afterPath="$PROJECT_DIR$/basic/controllers/CategoryController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/controllers/GoodsController.php" afterPath="$PROJECT_DIR$/basic/controllers/GoodsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/controllers/IndexController.php" afterPath="$PROJECT_DIR$/basic/controllers/IndexController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/views/index/index.php" afterPath="$PROJECT_DIR$/basic/views/index/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/views/index/main.php" afterPath="$PROJECT_DIR$/basic/views/index/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/views/index/menu.php" afterPath="$PROJECT_DIR$/basic/views/index/menu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/views/index/top.php" afterPath="$PROJECT_DIR$/basic/views/index/top.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jd.iws" />
@@ -170,7 +41,7 @@
       <file leaf-file-name="BrandController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basic/controllers/BrandController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="39" selection-start="274" selection-end="427" vertical-scroll-proportion="-5.882353" vertical-offset="200" max-vertical-offset="975">
+            <state line="15" column="27" selection-start="229" selection-end="229" vertical-scroll-proportion="-7.352941" vertical-offset="0" max-vertical-offset="1000">
               <folding>
                 <element signature="e#124#132#0" expanded="true" />
               </folding>
@@ -178,52 +49,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/views/category/index.php">
+      <file leaf-file-name="login.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/views/login/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="27" selection-start="325" selection-end="325" vertical-scroll-proportion="-5.882353" vertical-offset="0" max-vertical-offset="850">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/views/brand/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="29" selection-start="588" selection-end="588" vertical-scroll-proportion="-11.029411" vertical-offset="0" max-vertical-offset="1525">
+            <state line="12" column="16" selection-start="643" selection-end="643" vertical-scroll-proportion="-8.823529" vertical-offset="0" max-vertical-offset="1600">
               <folding>
-                <element signature="n#style#0;n#span#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/views/layouts/admin.php">
+      <file leaf-file-name="LoginController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/basic/controllers/LoginController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="17" selection-start="990" selection-end="990" vertical-scroll-proportion="-14.705882" vertical-offset="0" max-vertical-offset="750">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CategoryController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/basic/controllers/CategoryController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="32" selection-start="301" selection-end="301" vertical-scroll-proportion="0.45646068" vertical-offset="0" max-vertical-offset="950">
-              <folding>
-                <element signature="e#124#132#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/views/brand/edit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="70" selection-start="1333" selection-end="1333" vertical-scroll-proportion="-14.705882" vertical-offset="300" max-vertical-offset="1150">
+            <state line="26" column="16" selection-start="466" selection-end="466" vertical-scroll-proportion="0.7373595" vertical-offset="0" max-vertical-offset="750">
               <folding />
             </state>
           </provider>
@@ -255,7 +97,6 @@
         <option value="$PROJECT_DIR$/basic/web/css/topic.css" />
         <option value="$PROJECT_DIR$/basic/views/goods/add.php" />
         <option value="$PROJECT_DIR$/basic/controllers/IndexController.php" />
-        <option value="$PROJECT_DIR$/basic/controllers/GoodsController.php" />
         <option value="$PROJECT_DIR$/basic/views/goods/index.php" />
         <option value="$PROJECT_DIR$/basic/views/goods/edit.php" />
         <option value="$PROJECT_DIR$/basic/views/index/menu.php" />
@@ -265,8 +106,19 @@
         <option value="$PROJECT_DIR$/basic/views/brand/index.php" />
         <option value="$PROJECT_DIR$/basic/views/brand/edit.php" />
         <option value="$PROJECT_DIR$/basic/views/layouts/admin.php" />
+        <option value="$PROJECT_DIR$/basic/models/Goods.php" />
+        <option value="$PROJECT_DIR$/basic/models/Brand.php" />
+        <option value="$PROJECT_DIR$/basic/models/Category.php" />
+        <option value="$PROJECT_DIR$/basic/models/supplier.php" />
+        <option value="$PROJECT_DIR$/basic/models/Supplier.php" />
         <option value="$PROJECT_DIR$/basic/controllers/BrandController.php" />
+        <option value="$PROJECT_DIR$/basic/controllers/SupplierController.php" />
+        <option value="$PROJECT_DIR$/basic/controllers/GoodsController.php" />
         <option value="$PROJECT_DIR$/basic/controllers/CategoryController.php" />
+        <option value="$PROJECT_DIR$/basic/views/category/edit.php" />
+        <option value="$PROJECT_DIR$/basic/controllers/Login.php" />
+        <option value="$PROJECT_DIR$/basic/views/login/login.php" />
+        <option value="$PROJECT_DIR$/basic/controllers/LoginController.php" />
       </list>
     </option>
   </component>
@@ -368,95 +220,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="goods" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="category" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="brand" />
+              <option name="myItemId" value="login" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -506,6 +270,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\jd\basic\views\supplier" />
       <recent name="D:\jd\basic\web\js" />
       <recent name="D:\jd\basic\web" />
       <recent name="D:\jd\basic\web\css" />
@@ -547,7 +312,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496871" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1652065" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17459324" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -590,7 +355,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="55" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.4509804" vertical-offset="753" max-vertical-offset="2500">
           <folding>
-            <element signature="e#35#43#0" expanded="true" />
+            <element signature="e#35#43#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -672,7 +437,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="2" selection-start="546" selection-end="546" vertical-scroll-proportion="-17.588236" vertical-offset="27" max-vertical-offset="775">
           <folding>
-            <element signature="e#123#131#0" expanded="true" />
+            <element signature="e#123#131#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -705,28 +470,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic/views/index/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="95" selection-start="4171" selection-end="4171" vertical-scroll-proportion="0.5602241" vertical-offset="3075" max-vertical-offset="7950">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/controllers/GoodsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="34" selection-start="378" selection-end="378" vertical-scroll-proportion="0.59243697" vertical-offset="2" max-vertical-offset="850">
-          <folding>
-            <element signature="e#124#132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basic/views/brand/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="29" selection-start="588" selection-end="588" vertical-scroll-proportion="-11.029411" vertical-offset="0" max-vertical-offset="1525">
-          <folding>
-            <element signature="n#style#0;n#span#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#form#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -737,37 +484,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic/views/layouts/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="17" selection-start="990" selection-end="990" vertical-scroll-proportion="-14.705882" vertical-offset="0" max-vertical-offset="750">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basic/views/brand/edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="70" selection-start="1333" selection-end="1333" vertical-scroll-proportion="-14.705882" vertical-offset="300" max-vertical-offset="1150">
+        <state line="32" column="70" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.7022472" vertical-offset="300" max-vertical-offset="1150">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic/controllers/BrandController.php">
+    <entry file="file://$PROJECT_DIR$/basic/config/db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="39" selection-start="274" selection-end="427" vertical-scroll-proportion="-5.882353" vertical-offset="200" max-vertical-offset="975">
+        <state line="8" column="26" selection-start="178" selection-end="205" vertical-scroll-proportion="0.28089887" vertical-offset="0" max-vertical-offset="712">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/models/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="27" selection-start="251" selection-end="251" vertical-scroll-proportion="0.38623595" vertical-offset="0" max-vertical-offset="712">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/layouts/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="23" selection-start="971" selection-end="971" vertical-scroll-proportion="0.57081544" vertical-offset="51" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/controllers/SupplierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="37" selection-start="347" selection-end="347" vertical-scroll-proportion="0.49157304" vertical-offset="0" max-vertical-offset="712">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/models/Brand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="5" selection-start="255" selection-end="255" vertical-scroll-proportion="0.4213483" vertical-offset="0" max-vertical-offset="712">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/models/Goods.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="2" selection-start="257" selection-end="257" vertical-scroll-proportion="0.45646068" vertical-offset="0" max-vertical-offset="712">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/models/Supplier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="31" selection-start="254" selection-end="254" vertical-scroll-proportion="0.38623595" vertical-offset="0" max-vertical-offset="712">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/index/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="21" selection-start="3853" selection-end="3853" vertical-scroll-proportion="-11.029411" vertical-offset="2925" max-vertical-offset="7950">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/controllers/GoodsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="43" selection-start="342" selection-end="342" vertical-scroll-proportion="-7.7058825" vertical-offset="88" max-vertical-offset="1050">
           <folding>
-            <element signature="e#124#132#0" expanded="true" />
+            <element signature="e#124#132#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/basic/controllers/CategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="32" selection-start="301" selection-end="301" vertical-scroll-proportion="0.45646068" vertical-offset="0" max-vertical-offset="950">
+        <state line="23" column="5" selection-start="478" selection-end="478" vertical-scroll-proportion="-8.823529" vertical-offset="150" max-vertical-offset="950">
+          <folding>
+            <element signature="e#124#132#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/category/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="55" selection-start="624" selection-end="624" vertical-scroll-proportion="0.46494994" vertical-offset="0" max-vertical-offset="1450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/login/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="16" selection-start="643" selection-end="643" vertical-scroll-proportion="-8.823529" vertical-offset="0" max-vertical-offset="1600">
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/controllers/BrandController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="27" selection-start="229" selection-end="229" vertical-scroll-proportion="-7.352941" vertical-offset="0" max-vertical-offset="1000">
           <folding>
             <element signature="e#124#132#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/controllers/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="16" selection-start="466" selection-end="466" vertical-scroll-proportion="0.7373595" vertical-offset="0" max-vertical-offset="750">
+          <folding />
         </state>
       </provider>
     </entry>

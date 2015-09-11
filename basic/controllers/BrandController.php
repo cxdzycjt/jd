@@ -27,6 +27,7 @@ class BrandController extends Controller{
     public function actionEdit(){
         $app = Yii::$app->request;
         if($app->isPost){
+            $info = $app->getBodyParams();
 
         }else{
             $view = Yii::$app->view;

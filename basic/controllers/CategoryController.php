@@ -17,7 +17,7 @@ class CategoryController extends Controller{
 
     public function actionIndex(){
         $view = Yii::$app->view;
-        $view->params['layoutData']='添加商品';
+        $view->params['layoutData']='添加分类';
         $view->params['controller']='category';
         $view->params['action']='edit';
         return $this->render('index');
