@@ -8,7 +8,7 @@
 
 namespace app\controllers;
 
-
+use yii;
 use yii\base\Controller;
 
 class IndexController extends Controller{

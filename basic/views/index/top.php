@@ -3,7 +3,7 @@
 <head>
     <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="./Styles/general.css" rel="stylesheet" type="text/css" />
+    <link href="/css/general.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #header-div {
             background:#278296;
@@ -116,7 +116,7 @@
 <body>
 <div id="header-div">
     <div id="logo-div" style="bgcolor:#000000;">
-        <img src="./Images/ecshop_logo.gif" alt="ECSHOP - power for e-commerce" />
+        <img src="/img/ecshop_logo.gif" alt="ECSHOP - power for e-commerce" />
     </div>
     <div id="submenu-div">
         <ul>
@@ -133,11 +133,10 @@
 <div id="menu-div">
     <ul>
         <li class="fix-spacel">&nbsp;</li>
-        <li><a href="__GROUP__/Index/main" target="main-frame">起始页</a></li>
-        <li><a href="__GROUP__/Goods/goodsList" target="main-frame">商品列表</a></li>
-        <li><a href="__GROUP__/Order/orderList" target="main-frame">订单列表</a></li>
-        <li><a href="__GROUP__/Comment/commentList" target="main-frame">用户评论</a></li>
-        <li><a href="__GROUP__/User/userList" target="main-frame">会员列表</a></li>
+        <li><a href="/goods/index" target="main-frame">商品列表</a></li>
+        <li><a href="/order/index" target="main-frame">订单列表</a></li>
+        <li><a href="/comment/index" target="main-frame">用户评论</a></li>
+        <li><a href="/user/index" target="main-frame">会员列表</a></li>
         <li class="fix-spacer">&nbsp;</li>
     </ul>
     <br class="clear" />

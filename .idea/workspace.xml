@@ -1,7 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6bfdd1ca-3e89-4c72-84db-0085237b71c9" name="默认的" comment="" />
+    <list default="true" id="6bfdd1ca-3e89-4c72-84db-0085237b71c9" name="默认的" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/225-54.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/8800_110.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/Account_32-2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/LOGO2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/ads03.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/ajax_loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/area_link.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/arrow.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/arrow_left.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/arrow_right.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/arrowhead.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/bag_close.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/bag_open.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/banner0.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/banner1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/banner2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/base.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/base1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/basebg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/basetbb.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/basetbg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/basetbg1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/bg_repx.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/bgx.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/book_open.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/brand.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/brand_1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/btn_close.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/btn_drop.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/btn_maximize.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/btn_minimize.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/button_bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/by_top.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/cart.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/close.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/closeIcon.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/color_selecter.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/confirm.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/detail_botbg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/detail_footer.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/detail_header.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/dot.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/ecshop_logo.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/empty.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/error.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/filecheck.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/help03.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/help06.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/home.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/home_1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_account.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_add.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_copy.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_docs.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_drop.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_edit.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_js.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_output.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_priv.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_search.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_send_bonus.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_title.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_trash.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/icon_view.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/img_ser.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/infoheader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/information.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/line.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/line_1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/login.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/login03.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/login_line.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/logo.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/logo21.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/lowerbody.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/member_shop.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/menu_arrow.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/menu_minus.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/menu_plus.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/message.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/nav_03.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/nav_06.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/new.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/new_1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/no.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/notice.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/num.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/online.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/online.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/picb.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/picb2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/picb_hs.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/picc.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/picflag.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/picnoflag.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/sale.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/sale_1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/shop_tel.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/sort_asc.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/sort_desc.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/stepnum.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/succ.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/tel1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/tel2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/th_bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/top_icon.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/top_loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/top_min.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/typedot.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/typehome.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/typehome_1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/warning.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/warning_small.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/img/yes.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/controllers/BrandController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/controllers/CategoryController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/layouts/admin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/js/common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/brand/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/goods/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/css/general.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/js/global.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/css/index.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/brand/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/category/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/goods/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/js/jquery-1.8.2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/css/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/css/member.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/css/message.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/css/other.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/css/topic.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/js/transport.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/web/js/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/controllers/GoodsController.php" afterPath="$PROJECT_DIR$/basic/controllers/GoodsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/controllers/IndexController.php" afterPath="$PROJECT_DIR$/basic/controllers/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/views/index/index.php" afterPath="$PROJECT_DIR$/basic/views/index/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/views/index/main.php" afterPath="$PROJECT_DIR$/basic/views/index/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/views/index/menu.php" afterPath="$PROJECT_DIR$/basic/views/index/menu.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/views/index/top.php" afterPath="$PROJECT_DIR$/basic/views/index/top.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="jd.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,33 +166,116 @@
     <favorites_list name="jd" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="BrandController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/controllers/BrandController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="39" selection-start="274" selection-end="427" vertical-scroll-proportion="-5.882353" vertical-offset="200" max-vertical-offset="975">
+              <folding>
+                <element signature="e#124#132#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/views/category/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="27" selection-start="325" selection-end="325" vertical-scroll-proportion="-5.882353" vertical-offset="0" max-vertical-offset="850">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/views/brand/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="29" selection-start="588" selection-end="588" vertical-scroll-proportion="-11.029411" vertical-offset="0" max-vertical-offset="1525">
+              <folding>
+                <element signature="n#style#0;n#span#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/views/layouts/admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="17" selection-start="990" selection-end="990" vertical-scroll-proportion="-14.705882" vertical-offset="0" max-vertical-offset="750">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoryController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/basic/controllers/CategoryController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="32" selection-start="301" selection-end="301" vertical-scroll-proportion="0.45646068" vertical-offset="0" max-vertical-offset="950">
+              <folding>
+                <element signature="e#124#132#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/views/brand/edit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="70" selection-start="1333" selection-end="1333" vertical-scroll-proportion="-14.705882" vertical-offset="300" max-vertical-offset="1150">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/basic/views/index/top.php" />
-        <option value="$PROJECT_DIR$/basic/views/index/menu.php" />
-        <option value="$PROJECT_DIR$/basic/views/index/main.php" />
         <option value="$PROJECT_DIR$/basic/config/db.php" />
         <option value="$PROJECT_DIR$/basic/config/web.php" />
-        <option value="$PROJECT_DIR$/basic/controllers/GoodsController.php" />
-        <option value="$PROJECT_DIR$/basic/controllers/IndexController.php" />
         <option value="$PROJECT_DIR$/basic/views/index/index.php" />
+        <option value="$PROJECT_DIR$/basic/views/index/main.php" />
+        <option value="$PROJECT_DIR$/basic/web/css/index.css" />
+        <option value="$PROJECT_DIR$/basic/web/css/main.css" />
+        <option value="$PROJECT_DIR$/basic/web/css/member.css" />
+        <option value="$PROJECT_DIR$/basic/web/css/message.css" />
+        <option value="$PROJECT_DIR$/basic/web/css/other.css" />
+        <option value="$PROJECT_DIR$/basic/web/css/style.css" />
+        <option value="$PROJECT_DIR$/basic/web/css/topic.css" />
+        <option value="$PROJECT_DIR$/basic/views/goods/add.php" />
+        <option value="$PROJECT_DIR$/basic/controllers/IndexController.php" />
+        <option value="$PROJECT_DIR$/basic/controllers/GoodsController.php" />
+        <option value="$PROJECT_DIR$/basic/views/goods/index.php" />
+        <option value="$PROJECT_DIR$/basic/views/goods/edit.php" />
+        <option value="$PROJECT_DIR$/basic/views/index/menu.php" />
+        <option value="$PROJECT_DIR$/basic/controllers/CategoeyController.php" />
+        <option value="$PROJECT_DIR$/basic/views/category/index.php" />
+        <option value="$PROJECT_DIR$/basic/views/index/top.php" />
+        <option value="$PROJECT_DIR$/basic/views/brand/index.php" />
+        <option value="$PROJECT_DIR$/basic/views/brand/edit.php" />
+        <option value="$PROJECT_DIR$/basic/views/layouts/admin.php" />
+        <option value="$PROJECT_DIR$/basic/controllers/BrandController.php" />
+        <option value="$PROJECT_DIR$/basic/controllers/CategoryController.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="93" />
-    <option name="y" value="44" />
+    <option name="x" value="15" />
+    <option name="y" value="75" />
     <option name="width" value="1656" />
-    <option name="height" value="908" />
+    <option name="height" value="906" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -63,7 +290,7 @@
     <OptionsSetting value="true" id="更新" />
     <OptionsSetting value="true" id="状态" />
     <OptionsSetting value="true" id="编辑" />
-    <ConfirmationsSetting value="0" id="添加" />
+    <ConfirmationsSetting value="2" id="添加" />
     <ConfirmationsSetting value="0" id="移除" />
   </component>
   <component name="ProjectReloadState">
@@ -105,6 +332,170 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="goods" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="category" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="brand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -115,7 +506,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\jd\basic\web\js" />
       <recent name="D:\jd\basic\web" />
+      <recent name="D:\jd\basic\web\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -144,8 +537,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="93" y="44" width="1656" height="908" extended-state="0" />
-    <editor active="false" />
+    <frame x="15" y="75" width="1656" height="906" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="更改" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -153,20 +546,20 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16395494" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496871" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1652065" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -184,6 +577,200 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/basic/config/console.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="34" selection-start="350" selection-end="350" vertical-scroll-proportion="0.45518208" vertical-offset="0" max-vertical-offset="925">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="55" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.4509804" vertical-offset="753" max-vertical-offset="2500">
+          <folding>
+            <element signature="e#35#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/web/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="288" column="30" selection-start="17867" selection-end="17867" vertical-scroll-proportion="-124.5" vertical-offset="975" max-vertical-offset="7350">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/web/css/general.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="1" selection-start="403" selection-end="403" vertical-scroll-proportion="0.9024064" vertical-offset="0" max-vertical-offset="1650">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/web/css/topic.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="731" selection-end="731" vertical-scroll-proportion="0.46561605" vertical-offset="0" max-vertical-offset="698">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="313" column="51" selection-start="16980" selection-end="16980" vertical-scroll-proportion="10.332847" vertical-offset="747" max-vertical-offset="8000">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/web/css/other.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="80" selection-start="4900" selection-end="4900" vertical-scroll-proportion="2.8832116" vertical-offset="0" max-vertical-offset="2200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/web/css/message.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="100" selection-start="1851" selection-end="1851" vertical-scroll-proportion="0.7708029" vertical-offset="147" max-vertical-offset="850">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/web/css/member.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="64" selection-start="9598" selection-end="9598" vertical-scroll-proportion="5.2963505" vertical-offset="197" max-vertical-offset="4575">
+          <folding>
+            <marker date="1441938989678" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1441938989678" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/web/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="65" selection-start="925" selection-end="925" vertical-scroll-proportion="0.36934307" vertical-offset="1247" max-vertical-offset="21450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/config/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="43" selection-start="50" selection-end="50" vertical-scroll-proportion="0.070028014" vertical-offset="0" max-vertical-offset="1800">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/index/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="34" selection-start="643" selection-end="643" vertical-scroll-proportion="-3.0490196" vertical-offset="2502" max-vertical-offset="3250">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/controllers/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="2" selection-start="546" selection-end="546" vertical-scroll-proportion="-17.588236" vertical-offset="27" max-vertical-offset="775">
+          <folding>
+            <element signature="e#123#131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/goods/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="43" selection-start="550" selection-end="550" vertical-scroll-proportion="0.42796007" vertical-offset="0" max-vertical-offset="2250">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/goods/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="65" selection-start="241" selection-end="241" vertical-scroll-proportion="0.24509804" vertical-offset="0" max-vertical-offset="2900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/index/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="63" selection-start="843" selection-end="847" vertical-scroll-proportion="0.5602241" vertical-offset="0" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/index/top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="117" column="48" selection-start="2727" selection-end="2727" vertical-scroll-proportion="0.27731094" vertical-offset="2727" max-vertical-offset="3750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/index/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="139" column="95" selection-start="4171" selection-end="4171" vertical-scroll-proportion="0.5602241" vertical-offset="3075" max-vertical-offset="7950">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/controllers/GoodsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="34" selection-start="378" selection-end="378" vertical-scroll-proportion="0.59243697" vertical-offset="2" max-vertical-offset="850">
+          <folding>
+            <element signature="e#124#132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/brand/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="29" selection-start="588" selection-end="588" vertical-scroll-proportion="-11.029411" vertical-offset="0" max-vertical-offset="1525">
+          <folding>
+            <element signature="n#style#0;n#span#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/category/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="27" selection-start="325" selection-end="325" vertical-scroll-proportion="-5.882353" vertical-offset="0" max-vertical-offset="850">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/layouts/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="17" selection-start="990" selection-end="990" vertical-scroll-proportion="-14.705882" vertical-offset="0" max-vertical-offset="750">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/brand/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="70" selection-start="1333" selection-end="1333" vertical-scroll-proportion="-14.705882" vertical-offset="300" max-vertical-offset="1150">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/controllers/BrandController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="39" selection-start="274" selection-end="427" vertical-scroll-proportion="-5.882353" vertical-offset="200" max-vertical-offset="975">
+          <folding>
+            <element signature="e#124#132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/controllers/CategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="32" selection-start="301" selection-end="301" vertical-scroll-proportion="0.45646068" vertical-offset="0" max-vertical-offset="950">
+          <folding>
+            <element signature="e#124#132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
 

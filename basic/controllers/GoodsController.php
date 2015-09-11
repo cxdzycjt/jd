@@ -8,13 +8,27 @@
 
 namespace app\controllers;
 
-
+use yii;
 use yii\base\Controller;
 
 class GoodsController extends Controller{
 
+    public $layout='admin';
+
     public function actionIndex(){
-        echo 1;
-        die;
+      return $this->render('index');
+    }
+
+    public function actionEdit(){
+        $app = Yii::$app->request;
+        if($app->isPost){
+
+        }else{
+            return $this->render('edit');
+        }
+    }
+
+    public function actionDel(){
+
     }
 } 
