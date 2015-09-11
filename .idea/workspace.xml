@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bfdd1ca-3e89-4c72-84db-0085237b71c9" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/models/Brand.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/models/Category.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/models/Goods.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/controllers/LoginController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/models/Supplier.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/controllers/SupplierController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/category/edit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/supplier/edit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/supplier/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/views/login/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/controllers/BrandController.php" afterPath="$PROJECT_DIR$/basic/controllers/BrandController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/controllers/CategoryController.php" afterPath="$PROJECT_DIR$/basic/controllers/CategoryController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/controllers/GoodsController.php" afterPath="$PROJECT_DIR$/basic/controllers/GoodsController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jd.iws" />
@@ -62,10 +50,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LoginController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basic/controllers/LoginController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="16" selection-start="466" selection-end="466" vertical-scroll-proportion="0.7373595" vertical-offset="0" max-vertical-offset="750">
+            <state line="26" column="16" selection-start="466" selection-end="466" vertical-scroll-proportion="-15.441176" vertical-offset="0" max-vertical-offset="750">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sql" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="827" selection-end="827" vertical-scroll-proportion="0.63672924" vertical-offset="0" max-vertical-offset="1050">
               <folding />
             </state>
           </provider>
@@ -119,6 +116,7 @@
         <option value="$PROJECT_DIR$/basic/controllers/Login.php" />
         <option value="$PROJECT_DIR$/basic/views/login/login.php" />
         <option value="$PROJECT_DIR$/basic/controllers/LoginController.php" />
+        <option value="$PROJECT_DIR$/sql" />
       </list>
     </option>
   </component>
@@ -179,86 +177,6 @@
               <option name="myItemId" value="jd" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="login" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -302,7 +220,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="15" y="75" width="1656" height="906" extended-state="1" />
+    <frame x="15" y="75" width="1656" height="906" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="更改" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -594,7 +512,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/basic/controllers/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="16" selection-start="466" selection-end="466" vertical-scroll-proportion="0.7373595" vertical-offset="0" max-vertical-offset="750">
+        <state line="26" column="16" selection-start="466" selection-end="466" vertical-scroll-proportion="-15.441176" vertical-offset="0" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="827" selection-end="827" vertical-scroll-proportion="0.63672924" vertical-offset="0" max-vertical-offset="1050">
           <folding />
         </state>
       </provider>
