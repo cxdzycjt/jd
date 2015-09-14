@@ -1,0 +1,9 @@
+ul{
+    list-style:none;
+}
+
+.pagination li{
+    float:left;
+    padding-left:10px;
+    font-size: 15px;
+}

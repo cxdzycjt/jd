@@ -1,7 +1,12 @@
+<!--提示框-->
+<div id="top-alert" class="fixed alert" style="display: none;">
+    <button class="close fixed" style="margin-top: 4px;">×</button>
+    <div class="alert-content">这是内容</div>
+</div>
 <div class="form-div">
-    <form action="" name="searchForm">
+    <form action="/brand/index" name="searchForm">
         <img src="/img/icon_search.gif" width="26" height="22" border="0" alt="search" />
-        <input type="text" name="brand_name" size="15" />
+        <input type="text" name="name" size="15" value="<?php echo $name; ?>" />
         <input type="submit" value=" 搜索 " class="button" />
     </form>
 </div>
@@ -9,48 +14,55 @@
     <div class="list-div" id="listDiv">
         <table cellpadding="3" cellspacing="1">
             <tr>
+                <th align="left"><input class="J_check_all"  type="checkbox"/>编号</th>
                 <th>品牌名称</th>
-                <th>品牌网址</th>
-                <th>品牌描述</th>
                 <th>排序</th>
+                <th>品牌LOGO</th>
                 <th>是否显示</th>
+                <th>添加时间</th>
                 <th>操作</th>
             </tr>
+            <?php
+            foreach($brandList as $brand){
+                ?>
+                <tr>
+                    <td class="first-cell" align="left"><input type="checkbox" name="id[]" value="<?php echo $brand['id']?>"/><?php echo $brand['id']?></td>
+                    <td class="first-cell" align="center"><?php echo $brand['name']; ?></td>
+                    <td align="center"><?php echo $brand['sort']; ?></td>
+                    <td align="center"><img style="width: 60px;" src="<?php echo $brand['logo']; ?>" alt=""/></td>
+                    <td align="center">
+                        <a class="ajax-get refresh" href="/brand/status/<?php echo $brand['id']; ?>/<?php echo $brand['status']; ?>">
+                            <img src="/img/<?php echo $brand['status']; ?>.gif">
+                        </a>
+                    </td>
+                    <td align="center"><?php echo date('Y-m-d H:i:s',$brand['createTime']); ?></td>
+                    <td align="center">
+                        <a href="/brand/edit/<?php echo $brand['id']; ?>" title="编辑">编辑</a> |
+                        <a class="ajax-get refresh"  href="/brand/del/<?php echo $brand['id']; ?>" title="移除">移除</a>
+                    </td>
+                </tr>
+            <?php   }   ?>
             <tr>
-                <td class="first-cell">
-                    <span style="float:right"><a href="" target="_brank"><img src="" width="16" height="16" border="0" alt="品牌LOGO" /></a></span>
-                    <span></span>
-                </td>
-                <td align="center">
-                    <a href="<{$val.site_url}>" target="_brank"></a>
-                </td>
-                <td align="center">公司网站：</td>
-                <td align="center"><span></span></td>
-                <td align="center"><img src="" /></td>
-                <td align="center">
-                    <a href="#" title="编辑">编辑</a> |
-                    <a href="#" title="编辑">移除</a>
-                </td>
-            </tr>
-            <tr>
+                <td><button class="J_ajax_post">删除</button></td>
                 <td align="right" nowrap="true" colspan="6">
                     <div id="turn-page">
-                        总计 <span id="totalRecords">11</span>
-                        个记录分为 <span id="totalPages">1</span>
-                        页当前第 <span id="pageCurrent">1</span>
-                        页，每页 <input type='text' size='3' id='pageSize' value="15" />
-                        <span id="page-link">
-                            <a href="#">第一页</a>
-                            <a href="#">上一页</a>
-                            <a href="#">下一页</a>
-                            <a href="#">最末页</a>
-                            <select id="gotoPage">
-                                <option value='1'>1</option>
-                            </select>
-                        </span>
+                        <?php echo \yii\widgets\LinkPager::widget(['pagination' => $pages]) ?>
                     </div>
                 </td>
             </tr>
         </table>
     </div>
 </form>
+<script type="text/javascript">
+    $(function(){
+        //批量删除
+        $('.J_ajax_post').click(function(){
+            var id =  $(":checked[name='id[]']").serialize();
+            $.get('/brand/del',{'id':id},function(data){
+                console.log(data);
+                return false;
+            });
+        });
+    });
+
+</script>

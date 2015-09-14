@@ -1,6 +1,8 @@
 <?php
 
 $params = require(__DIR__ . '/params.php');
+Yii::$classMap['Method'] = '@app/libs/Method.php';
+Yii::$classMap['UploadFile'] = '@app/libs/upload/UploadFile.php';
 
 $config = [
     'id' => 'basic',
@@ -12,13 +14,14 @@ $config = [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'dongshao',
         ],
-        'urlManager' => [
+        'urlManager'=>[
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules'=>[
+            'rules' => [
                 "<controller:\w+>/<action:\w+>/<id:\d+>"=>"<controller>/<action>",
-                '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+                '<controller:\w+>/<action:\w+>/<id:\d+>/<status:\d+>' => '<controller>/<action>',
             ],
+
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
