@@ -10,7 +10,7 @@
         <input type="submit" value=" 搜索 " class="button" />
     </form>
 </div>
-<form method="post" action="" name="listForm">
+<form method="post" action="/supplier/del" name="listForm">
     <div class="list-div" id="listDiv">
         <table cellpadding="3" cellspacing="1">
             <tr>
@@ -23,7 +23,7 @@
                 <th>操作</th>
             </tr>
             <?php
-                foreach($supplierList as $supplier){
+                foreach($models as $supplier){
                     ?>
             <tr>
                 <td class="first-cell" align="left"><input type="checkbox" name="id[]" value="<?php echo $supplier['id']?>"/><?php echo $supplier['id']?></td>
@@ -43,7 +43,9 @@
             </tr>
             <?php   }   ?>
             <tr>
-                <td><button class="J_ajax_post">删除</button></td>
+                <td>
+                    <button class="ajax-post" href="/supplier/del">删除</button>
+                </td>
                 <td align="right" nowrap="true" colspan="6">
                     <div id="turn-page">
                         <?php echo \yii\widgets\LinkPager::widget(['pagination' => $pages]) ?>
@@ -53,19 +55,3 @@
         </table>
     </div>
 </form>
-<script type="text/javascript">
-    $(function(){
-
-        //批量删除
-        $('.J_ajax_post').click(function(){
-           var id =  $(":checked[name='id[]']").serialize();
-            $.get('/supplier/del',{'id':id},function(data){
-                console.log(data);
-                return false;
-            });
-        });
-
-    });
-
-
-</script>

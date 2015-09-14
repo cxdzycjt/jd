@@ -17,4 +17,12 @@ class Supplier extends ActiveRecord{
         return '{{%Supplier}}';
     }
 
+    public function rules()
+    {
+        return [
+            [['name','sort','status','intro','createTime'], 'required'],
+
+        ];
+    }
+
 } 

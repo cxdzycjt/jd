@@ -23,13 +23,13 @@
                 <th>操作</th>
             </tr>
             <?php
-            foreach($brandList as $brand){
+            foreach($models as $brand){
                 ?>
                 <tr>
                     <td class="first-cell" align="left"><input type="checkbox" name="id[]" value="<?php echo $brand['id']?>"/><?php echo $brand['id']?></td>
                     <td class="first-cell" align="center"><?php echo $brand['name']; ?></td>
                     <td align="center"><?php echo $brand['sort']; ?></td>
-                    <td align="center"><img style="width: 60px;" src="<?php echo $brand['logo']; ?>" alt=""/></td>
+                    <td align="center"><img style="width: 60px; height: 45px;" src="<?php echo $brand['logo']; ?>" alt=""/></td>
                     <td align="center">
                         <a class="ajax-get refresh" href="/brand/status/<?php echo $brand['id']; ?>/<?php echo $brand['status']; ?>">
                             <img src="/img/<?php echo $brand['status']; ?>.gif">

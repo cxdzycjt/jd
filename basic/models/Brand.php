@@ -16,4 +16,12 @@ class Brand  extends ActiveRecord{
     public static function tableName(){
         return '{{%Brand}}';
     }
+
+    public function rules()
+    {
+        return [
+            [['name','logo','sort','status','intro','createTime'], 'required'],
+
+        ];
+    }
 } 

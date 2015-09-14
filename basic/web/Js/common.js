@@ -14,7 +14,7 @@ $(function(){
     /**
      * post提交
      */
-    $(".J-post").click(function(){
+    $(".ajax-post").click(function(){
         //删除时使用ajax和提交表单时使用ajax
         var target = $(this).attr('href') ||$(this).parents('form').prop('action') ; //得到点击按钮上面的href连接
 

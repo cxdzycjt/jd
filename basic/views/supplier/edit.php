@@ -4,19 +4,19 @@
 </div>
 <div class="main-div">
     <form method="post" action="/supplier/edit"enctype="multipart/form-data" >
-        <input type="hidden" name="id" class="id" value="<?php echo $supplierRow['id']; ?>"/>
+        <input type="hidden" name="id" class="id" value="<?php echo $commonData['id']; ?>"/>
         <table cellspacing="1" cellpadding="3" width="100%">
             <tr>
                 <td class="label">名称</td>
                 <td>
-                    <input type="text" name="name" class="name" maxlength="60" value="<?php echo $supplierRow['name']; ?>" />
+                    <input type="text" name="name" class="name" maxlength="60" value="<?php echo $commonData['name']; ?>" />
                     <span class="require-field">*</span>
                 </td>
             </tr>
             <tr>
                 <td class="label">排序</td>
                 <td>
-                    <input type="text" name="sort" class="sort" value="<?php if(!empty($supplierRow['sort'])){echo $supplierRow['sort'];}else{echo 1;} ?>" maxlength="40" size="15"/>
+                    <input type="text" name="sort" class="sort" value="<?php if(!empty($commonData['sort'])){echo $commonData['sort'];}else{echo 1;} ?>" maxlength="40" size="15"/>
                 </td>
             </tr>
             <tr>
@@ -29,7 +29,7 @@
             <tr>
                 <td class="label">描述</td>
                 <td>
-                    <textarea  name="intro" class="intro" cols="60" rows="4"><?php echo $supplierRow['intro']; ?></textarea>
+                    <textarea  name="intro" class="intro" cols="60" rows="4"><?php echo $commonData['intro']; ?></textarea>
                 </td>
             </tr>
             <tr>
@@ -43,6 +43,6 @@
 </div>
 <script>
     $(function(){
-        $(":radio[name='status']").val([<?php if(!empty($supplierRow['status'])){echo $supplierRow['status'];}else{echo 1;} ?>]);
+        $(":radio[name='status']").val([<?php if(!empty($commonData['status'])){echo $commonData['status'];}else{echo 1;} ?>]);
     });
 </script>
