@@ -11,7 +11,7 @@
     <script type="text/javascript" src="/js/jquery-1.8.2.min.js" ></script>
     <script type="text/javascript" src="/js/common.js" ></script>
     <script type="text/javascript" src="/uploadify/jquery.uploadify.min.js" ></script>
-    <link  type="text/css" href="/css/zTreeStyle/zTreeStyle.css" rel="stylesheet">
+
     <style type="text/css">
         .ztree{
             background-color: gainsboro;
