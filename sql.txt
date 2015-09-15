@@ -1,0 +1,70 @@
+#1.创建供应商表
+create table jd_supplier(
+  id int unsigned primary key auto_increment comment '编号',
+  name varchar(50) not null default '' comment '名字',
+  sort tinyint not null default 50  comment '排序',
+  status tinyint not null default 1 comment '是否显示1:表示显示,0: 表示不显示,-1:表示删除',
+  intro text not null comment '简介',
+	createTime int UNSIGNED not null default 0 comment '添加时间'
+)engine=MyISAM default charset utf8 comment '供应商';
+
+#2.商品品牌表
+create table jd_brand(
+  id int UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT 'Id',
+  name varchar(50) not null default '' comment '商品分类名称',
+  sort tinyint not null default 0 comment '品牌排序',
+  status tinyint not null default 0 comment '是否显示@radio|1=是,0=否',
+  intro text comment '描述',
+  createTime int UNSIGNED not null default 0 comment '添加时间'
+)engine=MyISAM default charset utf8 comment '商品品牌';
+
+alter table jd_brand add column brand_logo varchar(150) not null default '' comment 'LOGO地址' after brand_name;
+
+#3.分类表设计
+create table jd_category(
+  id int UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT 'Id',
+  name varchar(50) not null default '' comment '商品分类名称',
+	parent_id smallint not null default 0 comment '父分类ID',
+	lft int unsigned not null default 0 comment '左边界', 
+	rght int unsigned not null default 0 comment '右边界',
+  status tinyint not null default 0 comment '是否显示@radio|1=是,0=否',
+  intro text comment '描述@textarea',
+  createTime int UNSIGNED not null default 0 comment '添加时间'
+)engine=InnoDB default charset utf8 comment '商品分类';
+
+alter table jd_category drop column sort
+
+
+UPDATE `jd_Category` SET `id`='3', `name`='平板电视', `parent_id`=6, `old_parent_id`='', `status`=1, `intro`='123', `createTime`='1442305695' WHERE id='3'
+
+INSERT INTO `jd_category` VALUES ('1', '顶级分类', '0', '1', '20', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('2', '大家电', '1', '2', '9', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('3', '平板电视', '2', '3', '4', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('4', '空调', '2', '5', '6', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('5', '冰箱', '2', '7', '8', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('6', '生活电器', '1', '10', '19', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('7', '取暖器', '6', '11', '14', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('8', '净化器', '6', '15', '16', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('9', '加湿器', '6', '17', '18', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('10', '小太阳', '7', '12', '13', '1', '',1442138036);
+
+#4.商品表
+CREATE TABLE jd_goods(
+ goods_id int UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT '商品编号',
+ goods_name VARCHAR(50) not null default '' comment '商品名称',
+ goods_sn varchar(50) not null default 0 comment '商品货号',
+ goods_classify smallint not null default 0 comment '商品分类',
+ goods_brand varchar(50) not null default '' comment '商品品牌',
+ goods_shop_price tinyint not null default 0 comment '商品本店售价',
+ goods_number smallint not null default 0 comment '商品数量',
+ goods_status tinyint not null default 1 comment '是否上架1:表示显示,0: 表示不显示,-1:表示删除',
+ goods_recommend tinyint not null default 0 comment '是否加入推荐1:精品,2:新品,3:热销',
+ goods_sort tinyint not null default 0 comment '商品排序',
+ goods_bazaar_price tinyint not null default 0 comment '市场价格',
+ goods_keywords varchar(100) not null default '' comment '商品关键字(用逗号隔开)',
+ goods_logo varchar(100) not null default '' comment '商品LOGO',
+ goods_intro text comment '商品描述'
+)engine=INNODB default charset utf8 comment '商品表';
+
+
+

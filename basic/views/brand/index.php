@@ -1,8 +1,4 @@
-<!--提示框-->
-<div id="top-alert" class="fixed alert" style="display: none;">
-    <button class="close fixed" style="margin-top: 4px;">×</button>
-    <div class="alert-content">这是内容</div>
-</div>
+
 <div class="form-div">
     <form action="/brand/index" name="searchForm">
         <img src="/img/icon_search.gif" width="26" height="22" border="0" alt="search" />

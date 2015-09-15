@@ -8,31 +8,18 @@
 
 namespace app\controllers;
 
+use app\models\Category;
 use Yii;
-use yii\base\Controller;
 
-class CategoryController extends Controller{
+class CategoryController extends BaseController{
 
-    public $layout='admin';
+    protected $model_class  = 'app\models\Category';
+    protected $location_url = "category";
+    protected $title = '分类';
 
-    public function actionIndex(){
-        $view = Yii::$app->view;
-        $view->params['layoutData']='添加分类';
-        $view->params['controller']='category';
-        $view->params['action']='edit';
-        return $this->render('index');
-    }
-
-    public function actionEdit(){
-        $app = Yii::$app->request;
-        if($app->isPost){
-
-        }else{
-            $view = Yii::$app->view;
-            $view->params['layoutData']='商品分类';
-            $view->params['controller']='category';
-            $view->params['action']='index';
-            return $this->render('edit');
-        }
+    protected function edit_view_before(){
+        $data = new Category();
+        $result = $data->getJsonTree();
+        return $result;
     }
 } 

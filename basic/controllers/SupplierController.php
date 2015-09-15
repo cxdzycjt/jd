@@ -15,7 +15,8 @@ use yii\base\Controller;
 use yii\data\Pagination;
 class SupplierController extends BaseController{
 
-    protected $model_class  = "app\models\Supplier";
+    protected $model_class  = 'app\models\Supplier';
     protected $location_url = "supplier";
+    protected $title = '供应商';
 
 }

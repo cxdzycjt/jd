@@ -1,8 +1,4 @@
-<!--提示框-->
-<div id="top-alert" class="fixed alert" style="display: none;">
-    <button class="close fixed" style="margin-top: 4px;">×</button>
-    <div class="alert-content">这是内容</div>
-</div>
+
 <div class="main-div">
     <form method="post" action="/brand/edit"enctype="multipart/form-data" >
         <input type="hidden" name="id" class="id" value="<?php echo $commonData['id']; ?>"/>

@@ -15,6 +15,7 @@ use yii\base\Controller;
 use yii\data\Pagination;
 class BrandController extends BaseController{
 
-    protected $model_class = "app\models\Brand";
+    protected $model_class = 'app\models\Brand';
     protected $location_url = "brand";
+    protected $title = '品牌';
 } 

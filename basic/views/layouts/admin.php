@@ -11,8 +11,13 @@
     <script type="text/javascript" src="/js/jquery-1.8.2.min.js" ></script>
     <script type="text/javascript" src="/js/common.js" ></script>
     <script type="text/javascript" src="/uploadify/jquery.uploadify.min.js" ></script>
+    <link  type="text/css" href="/css/zTreeStyle/zTreeStyle.css" rel="stylesheet">
     <style type="text/css">
-
+        .ztree{
+            background-color: gainsboro;
+            width: 200px;
+            overflow-y: scroll;
+        }
     </style>
 </head>
 <body>
@@ -22,6 +27,11 @@
     <span id="search_id" class="action-span1"> - 品牌管理</span>
     <div style="clear:both"></div>
 </h1>
+<!--提示框-->
+<div id="top-alert" class="fixed alert" style="display: none;">
+    <button class="close fixed" style="margin-top: 4px;">×</button>
+    <div class="alert-content">这是内容</div>
+</div>
 
 <?php echo $content; ?>
 

@@ -32,7 +32,7 @@ class BaseController extends Controller{
         $models        =    $data->offset($pages->offset)->limit($pages->limit)->all();
 
         $view = Yii::$app->view;
-        $view->params['layoutData'] = '添加供应商';
+        $view->params['layoutData'] = '添加'.$this->title;
         $view->params['controller'] = $this->location_url;
         $view->params['action']      = 'edit';
 
@@ -72,11 +72,15 @@ class BaseController extends Controller{
             $id          = $app->get('id');
             $commonData  = $model_class::find()->where(['id'=>$id])->one();
             $view        = Yii::$app->view;
-            $view->params['layoutData'] = '供应商列表';
-            $view->params['controller'] = $this->location_url;
-            $view->params['action']     = 'index';
-            return $this->render('edit',['commonData'=>$commonData]);
+            $view->params['layoutData'] =  $this->title.'列表';
+            $view->params['controller'] =  $this->location_url;
+            $view->params['action']     =  'index';
+            $tree                         =  $this->edit_view_before();
+            return $this->render('edit',['commonData'=>$commonData,'tree'=>$tree]);
         }
+    }
+    protected function edit_view_before(){
+
     }
     public function actionDel(){
         $model_class   =    $this->model_class;
@@ -127,4 +131,4 @@ class BaseController extends Controller{
         }
     }
 
-} 
+}

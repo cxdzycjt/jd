@@ -1,7 +1,4 @@
-<div id="top-alert" class="fixed alert" style="display: none;">
-    <button class="close fixed" style="margin-top: 4px;">×</button>
-    <div class="alert-content">这是内容</div>
-</div>
+
 <div class="main-div">
     <form method="post" action="/supplier/edit"enctype="multipart/form-data" >
         <input type="hidden" name="id" class="id" value="<?php echo $commonData['id']; ?>"/>
@@ -34,7 +31,7 @@
             </tr>
             <tr>
                 <td colspan="2" align="center"><br />
-                    <input type="button" class="button J-post" value=" 确定 " />
+                    <input type="button" class="button ajax-post" value=" 确定 " />
                     <input type="reset" class="button" value=" 重置 " />
                 </td>
             </tr>
@@ -44,5 +41,6 @@
 <script>
     $(function(){
         $(":radio[name='status']").val([<?php if(!empty($commonData['status'])){echo $commonData['status'];}else{echo 1;} ?>]);
+
     });
 </script>
