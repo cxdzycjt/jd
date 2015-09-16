@@ -58,18 +58,17 @@
                 }
             }
         };
-
         var zNodes = <?php echo $tree; ?>;          //取出php给页面分配的json数据
-
         var treeObj =$.fn.zTree.init($("#tree"), setting, zNodes);
         //var treeObj = $.fn.zTree.getZTreeObj("tree"); //参数为id的值,不加#
         treeObj.expandAll(true);            //展开
-             var parentNode= treeObj.getNodeByParam('id',<?php echo $commonData['parent_id']; ?>); //根据id(该id是数据库中的)找到指定的节点..
-             treeObj.selectNode(parentNode); //选中找到的节点
-             $("#parent_text").val(parentNode.name);
-
-
-
+        var parent_id = <?php echo  $commonData['parent_id']?$commonData['parent_id']:"'';"; ?>
+        if(parent_id != ''){
+            var parentNode= treeObj.getNodeByParam('id',<?php echo  $commonData['parent_id']?$commonData['parent_id']:"''"; ?>); //根据id(该id是数据库中的)找到指定的节点..
+            treeObj.selectNode(parentNode); //选中找到的节点
+            $("#parent_text").val(parentNode.name);
+        }else{
+        }
     });
 
 </script>
