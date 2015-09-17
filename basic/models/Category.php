@@ -25,9 +25,7 @@ class Category  extends ActiveRecord{
     }
     public  function getJsonTree(){
         $app = \Yii::$app->db;
-        #$sql = "status>0";
-        #$result = $this::find()->select(array('id','name','parent_id'))->andWhere($sql)->orderBy('lft')->all();
-        $sql = "SELECT id,name,parent_id FROM {{%Category}} WHERE status>0 ORDER BY lft";
+        $sql = "SELECT id,name,parent_id FROM {{%Category}} WHERE status>0 AND parent_id>0 ORDER BY lft";
         $result = $app->createCommand($sql)->queryAll();
         return json_encode($result);
     }
