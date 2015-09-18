@@ -38,5 +38,3 @@
     });
 
 </script>
-
-<?php if($category['parent_id']!=1){echo 'treegrid-parent-'.$category['parent_id'];}else{}?>
