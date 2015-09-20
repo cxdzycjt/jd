@@ -1,35 +1,28 @@
 <div class="form-div">
-    <form action="" name="searchForm">
+    <form action="/goods/index" name="searchForm" method="get">
         <img src="/img/icon_search.gif" width="26" height="22" border="0" alt="search" />
         <!-- 分类 -->
-        <select name="cat_id">
-            <option value="0">所有分类</option>
-            <foreach name="cat_list" item="val">
-                <option value="<{$val.cat_id}>"><{$val.lev|str_repeat='&nbsp;&nbsp;',###}><{$val.cat_name}></option>
-            </foreach>
+        <select name="category_id">
+            <option value="">所有分类</option>
+            <?php foreach(json_decode($category,true) as $cate){ ?>
+                <option <?php if($category_id==$cate['id']){echo 'selected';}?> value="<?php echo $cate['id']; ?>"><?php echo $cate['name']; ?></option>
+            <?php  }   ?>
         </select>
         <!-- 品牌 -->
         <select name="brand_id">
-            <option value="0">所有品牌</option>
-            <foreach name="brand_list" item="val">
-                <option value="<{$val.brand_id}>"><{$val.brand_name}></option>
-            </foreach>
-        </select>
-        <!-- 推荐 -->
-        <select name="intro_type">
-            <option value="0">全部</option>
-            <option value="is_best">精品</option>
-            <option value="is_new">新品</option>
-            <option value="is_hot">热销</option>
+            <option value="">所有品牌</option>
+            <?php foreach($brand as $bran){ ?>
+                <option <?php if($brand_id==$bran['id']){echo 'selected';}?> value="<?php echo $bran['id']; ?>"><?php echo $bran['name']; ?></option>
+            <?php  }   ?>
         </select>
         <!-- 上架 -->
         <select name="is_on_sale">
             <option value=''>全部</option>
-            <option value="1">上架</option>
-            <option value="0">下架</option>
+            <option <?php if($is_on_sale==1 && is_numeric($is_on_sale)){echo 'selected';}?> value="1">上架</option>
+            <option <?php if($is_on_sale==0 && is_numeric($is_on_sale)){echo 'selected';}?>  value="0">下架</option>
         </select>
         <!-- 关键字 -->
-        关键字 <input type="text" name="keyword" size="15" />
+        关键字 <input type="text" name="name" size="15" value="<?php echo $name; ?>" />
         <input type="submit" value=" 搜索 " class="button" />
     </form>
 </div>
@@ -39,47 +32,51 @@
     <div class="list-div" id="listDiv">
         <table cellpadding="3" cellspacing="1">
             <tr>
-                <th>编号</th>
+                <th align="left"><input class="J_check_all"  type="checkbox"/>编号</th>
                 <th>商品名称</th>
                 <th>货号</th>
-                <th>价格</th>
-                <th>上架</th>
-                <th>精品</th>
-                <th>新品</th>
-                <th>热销</th>
-                <th>推荐排序</th>
+                <th>市场价格</th>
+                <th>本店价格</th>
+                <th>分类</th>
+                <th>品牌</th>
+                <th>供货商</th>
+                <th>是否上架</th>
+                <th>状态</th>
                 <th>库存</th>
                 <th>操作</th>
             </tr>
-            <foreach name="list" item="val">
+            <?php
+                foreach($models as $goods){
+            ?>
                 <tr>
-                    <td align="center"><{$val.goods_id}></td>
-                    <td align="center" class="first-cell"><span><{$val.goods_name}></span></td>
-                    <td align="center"><span onclick=""><{$val.goods_sn}></span></td>
-                    <td align="center"><span><{$val.shop_price}></span></td>
-                    <td align="center"><img src=""/></td>
-                    <td align="center"><img src=""/></td>
-                    <td align="center"><img src=""/></td>
-                    <td align="center"><img src=""/></td>
-                    <td align="center"><span>100</span></td>
-                    <td align="center"><span><{$val.goods_number}></span></td>
+                    <td class="first-cell" align="left"><input type="checkbox" name="id[]" value="<?php echo $goods['id']?>"/><?php echo $goods['id']?></td>
+                    <td align="center" class="first-cell"><span><?php echo $goods['name'];?></span></td>
+                    <td align="center"><span onclick=""><?php echo $goods['sn'];?></span></td>
+                    <td align="center"><span><?php echo $goods['market_price'];?></span></td>
+                    <td align="center"><span><?php echo $goods['shop_price'];?></span></td>
+                    <td align="center"><span><?php echo $goods['category_name'];?></span></td>
+                    <td align="center"><?php echo $goods['brand_name'];?></td>
+                    <td align="center"><?php echo $goods['supplier_name'];?></td>
+                    <td align="center"><?php if($goods['is_on_sale']==1){echo '是';}else{echo '否';} ?></td>
+                    <td align="center"><?php echo $goods['status']; ?></td>
+                    <td align="center"><span><?php echo $goods['store_num'];?></span></td>
                     <td align="center">
-                        <a href="__APP__/Goods/?goods_id=<{$val.goods_id}>" target="_blank" title="查看"><img src="/img/icon_view.gif" width="16" height="16" border="0" /></a>
-                        <a href="__GROUP__/Goods/goodsEdit?goods_id=<{$val.goods_id}>" title="编辑"><img src="/img/icon_edit.gif" width="16" height="16" border="0" /></a>
-                        <a href="__GROUP__/Goods/goodsTrash?goods_id=<{$val.goods_id}>" onclick="" title="回收站"><img src="/img/icon_trash.gif" width="16" height="16" border="0" /></a></td>
+                        <!--<a href="" target="_blank" title="查看"><img src="/img/icon_view.gif" width="16" height="16" border="0" /></a>-->
+                        <a href="/goods/edit/<?php echo $goods['id']; ?>" title="编辑"><img src="/img/icon_edit.gif" width="16" height="16" border="0" /></a>
+                        <a class="ajax-get refresh"  href="/goods/del/<?php echo $goods['id']; ?>" title="回收站"><img src="/img/icon_trash.gif" width="16" height="16" border="0" /></a></td>
                 </tr>
-            </foreach>
-        </table>
-
-        <!-- 分页开始 -->
-        <table id="page-table" cellspacing="0">
+            <?php   }  ?>
             <tr>
-                <td width="80%">&nbsp;</td>
-                <td align="center" nowrap="true">
-                    <{$showPage}>
+                <td>
+                    <button class="ajax-post" href="/goods/del">删除</button>
+                </td>
+                <td align="right" nowrap="true" colspan="6">
+                    <div id="turn-page">
+                        <?php echo \yii\widgets\LinkPager::widget(['pagination' => $pages]) ?>
+                    </div>
                 </td>
             </tr>
         </table>
-        <!-- 分页结束 -->
+
     </div>
 </form>

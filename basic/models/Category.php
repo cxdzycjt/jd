@@ -20,13 +20,18 @@ class Category  extends ActiveRecord{
     public function rules()
     {
         return [
-            [['name','parent_id','lft','rght','status','intro','createTime'], 'required'],
+            [['name','parent_id','lft','rght','status','createTime'], 'required'],
 
         ];
     }
-    public  function getJsonTree(){
+    public  function getJsonTree($parent_id=false){
+        if($parent_id){
+            $parent = " AND parent_id>0 ";
+        }else{
+            $parent = '';
+        }
         $app = \Yii::$app->db;
-        $sql = "SELECT id,name,parent_id FROM {{%Category}} WHERE status>0  ORDER BY lft";
+        $sql = "SELECT id,name,parent_id FROM {{%Category}} WHERE status>0 {$parent} ORDER BY lft";
         $result = $app->createCommand($sql)->queryAll();
         return json_encode($result);
     }

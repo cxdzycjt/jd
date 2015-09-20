@@ -24,7 +24,7 @@ class BaseController extends Controller{
         $app           =     Yii::$app->request;
 
         $name          =    $app->get('name');
-        $sql           =    "name like '%$name%' and status>0";
+        $sql       =    "name like '%$name%' and status>0";
         $data          =    $model_class::find()->andWhere($sql)->orderBy('createTime desc');
 
         $total         =    $data->count();
@@ -34,15 +34,17 @@ class BaseController extends Controller{
         $view = Yii::$app->view;
         $view->params['layoutData'] = '添加'.$this->title;
         $view->params['controller'] = $this->location_url;
-        $view->params['action']      = 'edit';
-
+        $view->params['action']     = 'edit';
+        $data                       =  $this->edit_view_before();
         $data = array(
-            'models' => $models,
-            'total'         => $total,
-            'pages'         => $pages,
-            'name'          => isset($name)?$name:'',
+            'models'  => $models,
+            'total'   => $total,
+            'pages'   => $pages,
+            'name'    => isset($name)?$name:'',
+            'supplier'=> $data['supplier'],
+            'brand'   => $data['brand'],
+            'category'=> $data['tree'],
         );
-
         return $this->render('index',$data);
     }
 
@@ -52,7 +54,7 @@ class BaseController extends Controller{
         $supplierModel =    new $model_class();
         $info          =    $app->bodyParams;
         if($app->isPost){
-            $info['createTime']   = time();
+            $info['createTime'] = time();
             $supplierModel->setAttributes($info);
             if(!empty($info['id'])){
                 if($model_class::updateAll($info,'id=:id',array(':id'=>$info['id']))){
@@ -62,6 +64,7 @@ class BaseController extends Controller{
                 }
             }else{
                 if($supplierModel->save()){
+                    $this->_goods_sn($supplierModel->id);
                     Method::exit_json(1,'操作成功','/'.$this->location_url.'/index');
                 }else{
                     Method::exit_json(0,'操作失败');
@@ -75,9 +78,19 @@ class BaseController extends Controller{
             $view->params['layoutData'] =  $this->title.'列表';
             $view->params['controller'] =  $this->location_url;
             $view->params['action']     =  'index';
-            $tree                         =  $this->edit_view_before();
-            return $this->render('edit',['commonData'=>$commonData,'tree'=>$tree]);
+            $data                         =  $this->edit_view_before();
+            return $this->render('edit',
+                ['commonData'=>$commonData,
+                    'tree'   =>$data['tree'],
+                    'brand'  =>$data['brand'],
+                    'supplier'=>$data['supplier'],
+                    'rank'    =>$data['rank'],
+                ]
+            );
         }
+    }
+    protected function _goods_sn($sn){
+
     }
     protected function edit_view_before(){
 
