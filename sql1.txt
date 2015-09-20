@@ -1,0 +1,110 @@
+#创建数据表
+create database jd default charset utf8;
+
+#供应商
+create table jd_supplier(
+  supplier_id int unsigned primary key auto_increment comment '供应商Id',
+  supplier_name varchar(50) NOT NULL DEFAULT '' COMMENT '供应商名称',
+  supplier_sort tinyint not null default 0 comment '排序',
+  supplier_status tinyint not null default 1 comment '是否显示1:显示,0:不显示,-1:删除',
+  supplier_intro text comment '供应商简介'
+)engine=MYISAM default charset=utf8 comment='商品供应商';
+#品牌表
+create table jd_brand(
+  id int unsigned primary key auto_increment comment '编号',
+  name varchar(50) NOT NULL DEFAULT '' COMMENT '名称',
+  sort tinyint not null default 0 comment '排序',
+  status tinyint not null default 1 comment '是否显示1:显示,0:不显示,-1:删除',
+  intro text comment '简介'
+)engine=MYISAM default charset=utf8 comment='商品供应商';
+#像表中加一列
+alter table jd_brand add column logo varchar(200) not null default '' comment 'LOGO地址' after name
+alter table jd_brand add column createTime int not null default 0 comment '添加时间'
+
+
+
+INSERT INTO `jd_category` VALUES ('1', '顶级分类', '0', '1',  '20',  '0', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('2', '大家电',   '1', '2',  '9',   '1', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('3', '平板电视', '2', '3',  '4',   '2', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('4', '空调',     '2', '5',  '6',   '2', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('5', '冰箱',     '2', '7',  '8',   '2', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('6', '生活电器', '1', '10', '19',  '1', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('7', '取暖器',   '6', '11', '14',  '2', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('8', '净化器',   '6', '15', '16',  '2', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('9', '加湿器',   '6', '17', '18',  '2', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('10', '小太阳',  '7', '12', '13',  '3', '1', '',1442138036);
+
+#商品分类树桩结构
+create table jd_category(
+  id int UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT 'Id',
+  name varchar(50) not null default '' comment '商品分类名称',
+	parent_id smallint not null default 0 comment '父分类ID',
+	lft int unsigned not null default 0 comment '左边界', 
+	rght int unsigned not null default 0 comment '右边界',
+  status tinyint not null default 0 comment '是否显示@radio|1=是,0=否',
+  intro text comment '描述@textarea',
+  createTime int UNSIGNED not null default 0 comment '添加时间'
+)engine=InnoDB default charset utf8 comment '商品分类';
+
+UPDATE `jd_Category` SET  rght=rght-2, lft=lft-2 WHERE rght>8 and lft>8
+UPDATE `jd_Category` SET `rght`=`rght`+'rght-2', `lft`=`lft`+'lft-2' WHERE rght>8 and lft>8
+
+SELECT rght-lft+1 as width FROM jd_Category WHERE `id`='5'
+
+
+#商品表
+CREATE TABLE `jd_goods` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '编号',
+  `name` varchar(50) NOT NULL DEFAULT '' COMMENT '名字',
+  `sn` varchar(50) NOT NULL DEFAULT '' COMMENT '货号',
+  `logo` varchar(100) NOT NULL DEFAULT '' COMMENT 'LOGO',
+  `category_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '分类',
+  `brand_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '品牌',
+  `supplier_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '供货商',
+  `market_price` decimal(10,2) unsigned NOT NULL DEFAULT 0 COMMENT '市场价',
+  `shop_price` decimal(10,2) unsigned NOT NULL DEFAULT '0.00' COMMENT '本店价',
+  `store_type` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '库存类型@radio|0=单品,1=多品(从多值属性中统计)',
+  `store_num` int(10) unsigned NOT NULL DEFAULT 1 COMMENT '库存量',
+  `is_on_sale` tinyint(4) NOT NULL DEFAULT '1' COMMENT '是否上架@radio|1=是,0=否',
+  `goods_status` int(11) NOT NULL DEFAULT '0' COMMENT '商品状态',
+  `intro` text  COMMENT '简介@textarea',
+  `goods_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '商品类型',
+  `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否删除,-1表示删除,0表示正常',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品分类';
+
+alter table jd_goods add column createTime int unsigned not null default 0 comment '添加时间'
+
+#会员等级表
+create table jd_memer_rank(
+  id int UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT 'Id',
+  name varchar(50) not null default '' comment '会员名称',
+	score_bottom int not null default 0 comment '积分下线',
+	 score_top int not null default 0 comment '积分上线',
+  discount int not null default 0 comment '折扣率',
+  status tinyint not null default 0 comment '状态',
+  createTime int UNSIGNED not null default 0 comment '添加时间'
+)engine=InnoDB default charset utf8 comment '会员等级';
+
+#商品会员价格表
+create table jd_goodsMemberPrice(
+  goods_id int UNSIGNED not null default 0 comment '商品Id',
+  member_rank_id  tinyint UNSIGNED not null default 0 comment '会员等级',
+  price decimal(10,2) not null default 0 comment '价格',
+  createTime int UNSIGNED not null default 0 comment '添加时间'
+)engine=InnoDB default charset utf8 comment '商品会员价格';
+
+
+#设置字段时一般情况下不为空,并给一个默认值,速度快效率高.
+
+
+
+
+
+
+
+
+
+
+
+
