@@ -70,7 +70,7 @@
                 <td>
                     <button class="ajax-post" href="/goods/del">删除</button>
                 </td>
-                <td align="right" nowrap="true" colspan="6">
+                <td align="right" nowrap="true" colspan="11">
                     <div id="turn-page">
                         <?php echo \yii\widgets\LinkPager::widget(['pagination' => $pages]) ?>
                     </div>

@@ -19,10 +19,11 @@ class Goods extends ActiveRecord{
     public function rules()
     {
         return [
-            [['name','sn','logo','category_id','brand_id','supplier_id','market_price','shop_price','store_type','store_num','is_on_sale','goods_status','intro','goods_type_id','status','createTime'], 'safe'],
+            [['name','sn','logo','category_id','brand_id','supplier_id','market_price','shop_price','store_type','store_num','is_on_sale','goods_status','intro','status','createTime'], 'safe'],
 
         ];
     }
+
     public static  function getGoodsList($page,$limit,$sql=''){
         $app = \Yii::$app->db;
         $sql = "select gos.*, cgy.name as category_name,cgy.id as category_id,

@@ -11,6 +11,7 @@ namespace app\controllers;
 use app\models\Brand;
 use app\models\Category;
 use app\models\Goods;
+use app\models\GoodsMemberPrice;
 use app\models\Rank;
 use app\models\Supplier;
 use yii;
@@ -18,7 +19,6 @@ use Method;
 use yii\data\Pagination;
 class GoodsController extends BaseController{
 
-    protected $model_class  = 'app\models\Goods';
     protected $location_url = "goods";
     protected $title        = '商品';
 
@@ -66,8 +66,80 @@ class GoodsController extends BaseController{
         return $this->render('index',$data);
     }
 
+    public function actionEdit(){
+        $app           =    Yii::$app->request;
+        $GoodsModel =    new Goods();
+        $info          =    $app->bodyParams;
+        if($app->isPost){
 
+            #$GoodsModel->setAttributes($info);
+            $result = $this->GoodsSave($info);
+            if($result){
+                Method::exit_json(1,'操作成功','/'.$this->location_url.'/index');
+            }else{
+                Method::exit_json(0,'操作失败');
+            }
+        }else{
+            $id          = $app->get('id');
+            $commonData  = $GoodsModel::find()->where(['id'=>$id])->one();
+            $view        = Yii::$app->view;
+            $view->params['layoutData'] =  $this->title.'列表';
+            $view->params['controller'] =  $this->location_url;
+            $view->params['action']     =  'index';
+            $data                         =  $this->edit_view_before();
+            return $this->render('edit',
+                ['commonData'=>$commonData,
+                    'tree'   =>$data['tree'],
+                    'brand'  =>$data['brand'],
+                    'supplier'=>$data['supplier'],
+                    'rank'    =>$data['rank'],
+                ]
+            );
+        }
+    }
 
+    private function GoodsSave($info){
+        $GoodsModel =    new Goods();
+        $goodsDate = $info['goods'];
+        $numberPrice = $info['numberPrice'];
+        $transaction   = Yii::$app->db->beginTransaction();
+        try {
+            if(!empty($goodsDate['id'])){
+                $GoodsModel::updateAll($goodsDate,'id=:id',array(':id'=>$goodsDate['id']));
+                $result = $this->memberPrice($numberPrice,$goodsDate['id']);
+            }else{
+                $goodsDate['createTime'] = time();
+                $GoodsModel->setAttributes($goodsDate);
+                $GoodsModel->save();
+                $result = Goods::updateAll(['sn'=>Method::_setNumberId('S')],'id=:id',array(':id'=>$GoodsModel->id));
+            }
+            $transaction->commit();
+            if($result){
+                Method::exit_json(1,'操作成功','/'.$this->location_url.'/index');
+            }else{
+                Method::exit_json(0,'操作失败');
+            }
+        } catch (Exception $e) {
+            $transaction->rollBack();
+        }
+    }
+    private function memberPrice($numberPrice,$goodsId){
+        GoodsMemberPrice::deleteAll(['goods_id'=>$goodsId]);
+        $memberPriceArr = array();
+        foreach($numberPrice as $k=>$v){
+            $memberPriceArr[] = array('goods_id'=>$goodsId,'rank_id'=>$k,'price'=>$v);
+        }
+        $memberPriceModel = new GoodsMemberPrice();
+        foreach($memberPriceArr as $price){
+
+            $memberPriceModel->setAttributes($price);
+            $result = $memberPriceModel->save();
+            #$result = GoodsMemberPrice::updateAll($price,'goods_id=:id',array(':id'=>$goodsId));
+        }
+        return $result?true:false;
+    }
+
+    //准备页面数据
     protected function edit_view_before(){
         //分类的数据
         $data  = new Category();
@@ -84,10 +156,6 @@ class GoodsController extends BaseController{
             'supplier' =>$supplier,
             'rank'    =>$rank,
         );
-    }
-    protected function _goods_sn($save_sn){
-          $sn = Method::_setNumberId('S');
-          Goods::updateAll(['sn'=>$sn],'id=:id',array(':id'=>$save_sn));
     }
 
 } 

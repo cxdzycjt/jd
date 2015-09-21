@@ -18,7 +18,7 @@
             <table width="90%" class="form-table" id="general-table" align="center">
                 <tr>
                     <td class="label">商品名称：</td>
-                    <td><input type="text" name="name" value="<?php echo $commonData['name']; ?>"size="30" />
+                    <td><input type="text" name="goods[name]" value="<?php echo $commonData['name']; ?>"size="30" />
                         <span class="require-field">*</span></td>
                 </tr>
                 <tr>
@@ -28,7 +28,7 @@
                         <div class="upload-img-box" style="display: <?php if(empty($commonData['logo'])){echo 'none';}else{} ?>">
                             <div class="upload-pre-item">
                                 <img src="<?php echo $commonData['logo']; ?>" alt=""/>
-                                <input type="hidden" name="logo" value="<?php echo $commonData['logo']; ?>"/>
+                                <input type="hidden" name="goods[logo]" value="<?php echo $commonData['logo']; ?>"/>
                             </div>
                         </div>
                     </td>
@@ -37,7 +37,7 @@
                     <td class="label">商品分类：</td>
                     <td>
                         <input type="text" placeholder="不选择默认为顶级分类下" name="category_text" disabled id="category_text" maxlength="60" value="<?php echo $commonData['category_id']; ?>"/>
-                        <input type="hidden" name="category_id" id="category_id" value="<?php if(!empty($commonData['category_id'])){echo $commonData['category_id']; }else{echo 1;} ?>"/>
+                        <input type="hidden" name="goods[category_id]" id="category_id" value="<?php if(!empty($commonData['category_id'])){echo $commonData['category_id']; }else{echo 1;} ?>"/>
                         <!--生成树状结构的代码-->
                         <ul id="tree" class="ztree"></ul>
                     </td>
@@ -45,7 +45,7 @@
                 <tr>
                     <td class="label">商品品牌：</td>
                     <td>
-                        <select name="brand_id">
+                        <select name="goods[brand_id]">
                             <option value="0">请选择...</option>
                             <?php
                             foreach($brand as $barn){
@@ -58,7 +58,7 @@
                 <tr>
                     <td class="label">供应商：</td>
                     <td>
-                        <select name="supplier_id">
+                        <select name="goods[supplier_id]">
                             <option value="0">请选择...</option>
                             <?php
                             foreach($supplier as $suppli){
@@ -71,34 +71,34 @@
                 <tr>
                     <td class="label">市场售价：</td>
                     <td>
-                        <input type="text" name="market_price" value="<?php if(!empty($commonData['market_price'])){echo $commonData['market_price'];}else{echo 0;} ?>" size="20" />
+                        <input type="text" name="goods[market_price]" value="<?php if(!empty($commonData['market_price'])){echo $commonData['market_price'];}else{echo 0;} ?>" size="20" />
                     </td>
                 </tr>
                 <tr>
                     <td class="label">本店售价：</td>
                     <td>
-                        <input type="text" name="shop_price" value="<?php if(!empty($commonData['shop_price'])){echo $commonData['shop_price'];}else{echo 0;} ?>" size="20"/>
+                        <input type="text" name="goods[shop_price]" value="<?php if(!empty($commonData['shop_price'])){echo $commonData['shop_price'];}else{echo 0;} ?>" size="20"/>
                         <span class="require-field">*</span>
                     </td>
                 </tr>
                 <tr>
                     <td class="label">库存类型：</td>
                     <td>
-                        <input type="radio" name="store_type" value="1"/> 单品
-                        <input type="radio" name="store_type" value="0"/> 多品(多属性统计)
+                        <input type="radio" name="goods[store_type]" value="1"/> 单品
+                        <input type="radio" name="goods[store_type]" value="2"/> 多品(多属性统计)
                     </td>
                 </tr>
                 <tr>
                     <td class="label">商品数量：</td>
                     <td>
-                        <input type="text" name="store_num" size="20" value="<?php if(!empty($commonData['store_num'])){echo $commonData['store_num'];}else{echo 0;} ?>"/>
+                        <input type="text" name="goods[store_num]" size="20" value="<?php if(!empty($commonData['store_num'])){echo $commonData['store_num'];}else{echo 0;} ?>"/>
                     </td>
                 </tr>
                 <tr>
                     <td class="label">是否上架：</td>
                     <td>
-                        <input type="radio" name="is_on_sale" value="1"/> 是
-                        <input type="radio" name="is_on_sale" value="0"/> 否
+                        <input type="radio"  name="goods[is_on_sale]" value="1"/> 是
+                        <input type="radio"  name="goods[is_on_sale]" value="0"/> 否
                     </td>
                 </tr>
                 <!--<tr>
@@ -112,7 +112,7 @@
             </table>
             <table cellspacing="1" cellpadding="3" width="100%" style="display: none" class="form-table">
                 <tr>
-                    <td><textarea name="intro" id="intro"><?php echo $commonData['intro']; ?></textarea></td>
+                    <td><textarea name="goods[intro]" id="intro"><?php echo $commonData['intro']; ?></textarea></td>
                 </tr>
             </table>
 
@@ -143,7 +143,7 @@
                 </tr>
             </table>
             <div class="button-div">
-                <input type="hidden" name="id" value="<?php echo $commonData['id']; ?>"/>
+                <input type="hidden" name="goods[id]" value="<?php echo $commonData['id']; ?>"/>
                 <input type="button" class="button ajax-post" value=" 确定 " />
                 <input type="submit" value=" 确定 " class="button"/>
                 <input type="reset" value=" 重置 " class="button" />
@@ -153,8 +153,8 @@
 </div>
 <script>
     $(function(){
-        $(":radio[name='is_on_sale']").val([<?php if(!empty($commonData['is_on_sale'])){echo $commonData['is_on_sale'];}else{echo 1;} ?>]);
-        $(":radio[name='store_type']").val([<?php if(!empty($commonData['store_type'])){echo $commonData['store_type'];}else{echo 1;} ?>]);
+        $(":radio[name='goods[is_on_sale]']").val([<?php if(!empty($commonData['is_on_sale'])){echo $commonData['is_on_sale'];}else{echo 1;} ?>]);
+        $(":radio[name='goods[store_type]']").val([<?php if(!empty($commonData['store_type'])){echo $commonData['store_type'];}else{echo 1;} ?>]);
         /**商品页面切换**/
         $('#tabbar-div span').click(function(){
             $('#tabbar-div span').removeClass('tab-front').addClass('tab-back');
