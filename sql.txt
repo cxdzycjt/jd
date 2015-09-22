@@ -1,70 +1,117 @@
-#1.´´½¨¹©Ó¦ÉÌ±í
-create table jd_supplier(
-  id int unsigned primary key auto_increment comment '±àºÅ',
-  name varchar(50) not null default '' comment 'Ãû×Ö',
-  sort tinyint not null default 50  comment 'ÅÅĞò',
-  status tinyint not null default 1 comment 'ÊÇ·ñÏÔÊ¾1:±íÊ¾ÏÔÊ¾,0: ±íÊ¾²»ÏÔÊ¾,-1:±íÊ¾É¾³ı',
-  intro text not null comment '¼ò½é',
-	createTime int UNSIGNED not null default 0 comment 'Ìí¼ÓÊ±¼ä'
-)engine=MyISAM default charset utf8 comment '¹©Ó¦ÉÌ';
+#1.åˆ›å»ºä¾›åº”å•†è¡¨
+DELETE FROM `jd_GoodsMemberPrice` WHERE `goods_id`='1'
 
-#2.ÉÌÆ·Æ·ÅÆ±í
+create table jd_supplier(
+  id int unsigned primary key auto_increment comment 'ç¼–å·',
+  name varchar(50) not null default '' comment 'åå­—',
+  sort tinyint not null default 50  comment 'æ’åº',
+  status tinyint not null default 1 comment 'æ˜¯å¦æ˜¾ç¤º1:è¡¨ç¤ºæ˜¾ç¤º,0: è¡¨ç¤ºä¸æ˜¾ç¤º,-1:è¡¨ç¤ºåˆ é™¤',
+  intro text not null comment 'ç®€ä»‹',
+	createTime int UNSIGNED not null default 0 comment 'æ·»åŠ æ—¶é—´'
+)engine=MyISAM default charset utf8 comment 'ä¾›åº”å•†';
+
+#2.å•†å“å“ç‰Œè¡¨
 create table jd_brand(
   id int UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT 'Id',
-  name varchar(50) not null default '' comment 'ÉÌÆ··ÖÀàÃû³Æ',
-  sort tinyint not null default 0 comment 'Æ·ÅÆÅÅĞò',
-  status tinyint not null default 0 comment 'ÊÇ·ñÏÔÊ¾@radio|1=ÊÇ,0=·ñ',
-  intro text comment 'ÃèÊö',
-  createTime int UNSIGNED not null default 0 comment 'Ìí¼ÓÊ±¼ä'
-)engine=MyISAM default charset utf8 comment 'ÉÌÆ·Æ·ÅÆ';
+  name varchar(50) not null default '' comment 'å•†å“åˆ†ç±»åç§°',
+  sort tinyint not null default 0 comment 'å“ç‰Œæ’åº',
+  status tinyint not null default 0 comment 'æ˜¯å¦æ˜¾ç¤º@radio|1=æ˜¯,0=å¦',
+  intro text comment 'æè¿°',
+  createTime int UNSIGNED not null default 0 comment 'æ·»åŠ æ—¶é—´'
+)engine=MyISAM default charset utf8 comment 'å•†å“å“ç‰Œ';
 
-alter table jd_brand add column brand_logo varchar(150) not null default '' comment 'LOGOµØÖ·' after brand_name;
+alter table jd_brand add column brand_logo varchar(150) not null default '' comment 'LOGOåœ°å€' after brand_name;
 
-#3.·ÖÀà±íÉè¼Æ
+#3.åˆ†ç±»è¡¨è®¾è®¡
 create table jd_category(
   id int UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT 'Id',
-  name varchar(50) not null default '' comment 'ÉÌÆ··ÖÀàÃû³Æ',
-	parent_id smallint not null default 0 comment '¸¸·ÖÀàID',
-	lft int unsigned not null default 0 comment '×ó±ß½ç', 
-	rght int unsigned not null default 0 comment 'ÓÒ±ß½ç',
-  status tinyint not null default 0 comment 'ÊÇ·ñÏÔÊ¾@radio|1=ÊÇ,0=·ñ',
-  intro text comment 'ÃèÊö@textarea',
-  createTime int UNSIGNED not null default 0 comment 'Ìí¼ÓÊ±¼ä'
-)engine=InnoDB default charset utf8 comment 'ÉÌÆ··ÖÀà';
+  name varchar(50) not null default '' comment 'å•†å“åˆ†ç±»åç§°',
+	parent_id smallint not null default 0 comment 'çˆ¶åˆ†ç±»ID',
+	lft int unsigned not null default 0 comment 'å·¦è¾¹ç•Œ', 
+	rght int unsigned not null default 0 comment 'å³è¾¹ç•Œ',
+  status tinyint not null default 0 comment 'æ˜¯å¦æ˜¾ç¤º@radio|1=æ˜¯,0=å¦',
+  intro text comment 'æè¿°@textarea',
+  createTime int UNSIGNED not null default 0 comment 'æ·»åŠ æ—¶é—´'
+)engine=InnoDB default charset utf8 comment 'å•†å“åˆ†ç±»';
 
-alter table jd_category drop column sort
+#SELECT * FROM employee WHERE age BETWEEN 18 AND 24;
+UPDATE `jd_Category` SET `lft`=`lft`+4 WHERE lft<11 AND lft>9
+UPDATE `jd_Category` SET `rght`=`rght`+4 WHERE rght<11 AND rght>=9
+
+INSERT INTO `jd_category` VALUES ('1', 'é¡¶çº§åˆ†ç±»', '0',  '1',  '20', '1', '',1442138036);
+  INSERT INTO `jd_category` VALUES ('2', 'å¤§å®¶ç”µ',    '1', '2',  '9',  '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('3', 'å¹³æ¿ç”µè§†',  '2', '3',  '4',  '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('4', 'ç©ºè°ƒ',      '2', '5',  '6',  '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('5', 'å†°ç®±',      '2', '7',  '8',  '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('6','ç”Ÿæ´»ç”µå™¨',   '1', '10', '19', '1', '',1442138036);
+   INSERT INTO `jd_category` VALUES ('7', 'å–æš–å™¨',    '6', '11', '14', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('8', 'å‡€åŒ–å™¨',    '6', '15', '16', '1', '',1442138036);
+INSERT INTO `jd_category` VALUES ('9', 'åŠ æ¹¿å™¨',    '6', '17', '18', '1', '',1442138036);
+     INSERT INTO `jd_category` VALUES ('10', 'å°å¤ªé˜³',   '7', '12', '13', '1', '',1442138036);
+
+UPDATE `jd_Category` SET `lft`=`lft`-20 WHERE lft>7 AND lft<28
+
+select * from jd_Category where ltf >2 left <20
+
+#4.å•†å“è¡¨
+
+CREATE TABLE `jd_goods` (
+  `id` int(10) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'ç¼–å·',
+  `name` varchar(50) NOT NULL DEFAULT '' COMMENT 'åç§°',
+  `sn` varchar(50) NOT NULL DEFAULT '' COMMENT 'è´§å·',
+  `logo` varchar(100) NOT NULL DEFAULT '' COMMENT 'LOGO',
+  `category_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'åˆ†ç±»Id',
+  `brand_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'å“ç‰ŒId',
+  `supplier_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'ä¾›åº”å•†Id',
+  `market_price` decimal(10,2) unsigned NOT NULL DEFAULT 0 COMMENT 'å¸‚åœºä»·',
+  `shop_price` decimal(10,2) unsigned NOT NULL DEFAULT '0.00' COMMENT 'æœ¬åº—ä»·',
+  `store_type` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'åº“å­˜ç±»å‹@radio|1=å•å“,2=å¤šå“(å¤šå±æ€§ç»Ÿè®¡)',
+  `store_num` int(10) unsigned NOT NULL DEFAULT 1 COMMENT 'å•†å“æ•°é‡',
+  `is_on_sale` tinyint(4) NOT NULL DEFAULT '1' COMMENT 'æ˜¯å¦ä¸Šæ¶@radio|1=ä¸Šæ¶,0=ä¸‹æ¶',
+  `goods_status` int(11) NOT NULL DEFAULT '1' COMMENT 'å•†å“çŠ¶æ€',
+  `intro` text  COMMENT 'æè¿°@textarea',
+  `status` tinyint not null default 1 comment 'æ˜¯å¦åˆ é™¤,0è¡¨ç¤ºåˆ é™¤,1è¡¨ç¤ºæ­£å¸¸',
+  `createTime` int UNSIGNED not null default 0 comment 'æ·»åŠ æ—¶é—´'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='å•†å“è¡¨'
 
 
-UPDATE `jd_Category` SET `id`='3', `name`='Æ½°åµçÊÓ', `parent_id`=6, `old_parent_id`='', `status`=1, `intro`='123', `createTime`='1442305695' WHERE id='3'
+#5.ä¼šå‘˜ç­‰çº§è¡¨
+create table jd_rank(
+  id  tinyint unsigned primary key auto_increment comment 'ç¼–å·',
+  name varchar(50) not null default '' comment 'åç§°',
+  score_bottom int not null default 0 comment 'ç»éªŒå€¼ä¸‹é™',
+  score_top int not null default 0 comment 'ç»éªŒå€¼ä¸Šé™',
+  discount int  not null default 0 comment 'æŠ˜æ‰£ç‡%',
+  status tinyint not null default 1 comment 'æ˜¯å¦æ˜¾ç¤º@radio|1=æ˜¯,0=å¦',
+  `createTime` int UNSIGNED not null default 0 comment 'æ·»åŠ æ—¶é—´'
+)engine=InnoDB default charset utf8 comment 'ä¼šå‘˜çº§åˆ«';
 
-INSERT INTO `jd_category` VALUES ('1', '¶¥¼¶·ÖÀà', '0', '1', '20', '1', '',1442138036);
-INSERT INTO `jd_category` VALUES ('2', '´ó¼Òµç', '1', '2', '9', '1', '',1442138036);
-INSERT INTO `jd_category` VALUES ('3', 'Æ½°åµçÊÓ', '2', '3', '4', '1', '',1442138036);
-INSERT INTO `jd_category` VALUES ('4', '¿Õµ÷', '2', '5', '6', '1', '',1442138036);
-INSERT INTO `jd_category` VALUES ('5', '±ùÏä', '2', '7', '8', '1', '',1442138036);
-INSERT INTO `jd_category` VALUES ('6', 'Éú»îµçÆ÷', '1', '10', '19', '1', '',1442138036);
-INSERT INTO `jd_category` VALUES ('7', 'È¡Å¯Æ÷', '6', '11', '14', '1', '',1442138036);
-INSERT INTO `jd_category` VALUES ('8', '¾»»¯Æ÷', '6', '15', '16', '1', '',1442138036);
-INSERT INTO `jd_category` VALUES ('9', '¼ÓÊªÆ÷', '6', '17', '18', '1', '',1442138036);
-INSERT INTO `jd_category` VALUES ('10', 'Ğ¡Ì«Ñô', '7', '12', '13', '1', '',1442138036);
+#6.å•†å“ä¼šå‘˜ä»·æ ¼è¡¨
+create table jd_goodsMemberPrice(
+  goods_id  int unsigned   not null default 0  comment 'å•†å“ID',
+  rank_id tinyint unsigned  not null default 0 comment 'ä¼šå‘˜çº§åˆ«ID',
+  price decimal(10,2) unsigned  not null default 0 comment 'ä»·æ ¼'
+)engine=InnoDB default charset utf8 comment 'å•†å“ä¼šå‘˜ä»·æ ¼';
+#7.å•†å“ç›¸å†Œ
+create table jd_goodsGallery(
+  id  int unsigned primary key auto_increment comment 'ç¼–å·',
+  goods_id int unsigned  not null default 0 comment 'å•†å“ID',
+  pic varchar(100)   not null default '' comment 'å›¾ç‰‡åœ°å€'
+)engine=InnoDB default charset utf8 comment 'å•†å“ç›¸å†Œ';
 
-#4.ÉÌÆ·±í
-CREATE TABLE jd_goods(
- goods_id int UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT 'ÉÌÆ·±àºÅ',
- goods_name VARCHAR(50) not null default '' comment 'ÉÌÆ·Ãû³Æ',
- goods_sn varchar(50) not null default 0 comment 'ÉÌÆ·»õºÅ',
- goods_classify smallint not null default 0 comment 'ÉÌÆ··ÖÀà',
- goods_brand varchar(50) not null default '' comment 'ÉÌÆ·Æ·ÅÆ',
- goods_shop_price tinyint not null default 0 comment 'ÉÌÆ·±¾µêÊÛ¼Û',
- goods_number smallint not null default 0 comment 'ÉÌÆ·ÊıÁ¿',
- goods_status tinyint not null default 1 comment 'ÊÇ·ñÉÏ¼Ü1:±íÊ¾ÏÔÊ¾,0: ±íÊ¾²»ÏÔÊ¾,-1:±íÊ¾É¾³ı',
- goods_recommend tinyint not null default 0 comment 'ÊÇ·ñ¼ÓÈëÍÆ¼ö1:¾«Æ·,2:ĞÂÆ·,3:ÈÈÏú',
- goods_sort tinyint not null default 0 comment 'ÉÌÆ·ÅÅĞò',
- goods_bazaar_price tinyint not null default 0 comment 'ÊĞ³¡¼Û¸ñ',
- goods_keywords varchar(100) not null default '' comment 'ÉÌÆ·¹Ø¼ü×Ö(ÓÃ¶ººÅ¸ô¿ª)',
- goods_logo varchar(100) not null default '' comment 'ÉÌÆ·LOGO',
- goods_intro text comment 'ÉÌÆ·ÃèÊö'
-)engine=INNODB default charset utf8 comment 'ÉÌÆ·±í';
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

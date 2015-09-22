@@ -16,10 +16,12 @@ class GoodsMemberPrice extends ActiveRecord{
     public static function tableName(){
         return '{{%GoodsMemberPrice}}';
     }
+
     public function rules()
     {
         return [
             [['goods_id','rank_id','price'], 'required'],
+
         ];
     }
     public static function primaryKey(){

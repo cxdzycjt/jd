@@ -2,6 +2,7 @@
 <script type="text/javascript" src="/js/jquery.ztree.core-3.5.js"></script>
 <script type="text/javascript" charset="utf-8" src="/ueditor1_4_3/ueditor.config.js"></script>
 <script type="text/javascript" charset="utf-8" src="/ueditor1_4_3/ueditor.all.min.js"></script>
+
 <div class="tab-div">
     <div id="tabbar-div">
         <p>
@@ -120,7 +121,9 @@
                 <?php foreach($rank as $ran){   ?>
                 <tr>
                     <td class="label"><?php echo $ran['name']; ?>：</td>
-                    <td><input type="text" name="numberPrice[<?php echo $ran['id']?>]"/></td>
+                    <td>
+                    <input type="text" value="<?php foreach($rankPrice as $price){if($price['rank_id']==$ran['id']){echo $price['price']; }}  ?>" name="numberPrice[<?php echo $ran['id']?>]"/>
+                    </td>
                 </tr>
                 <?php  }  ?>
 
@@ -129,13 +132,52 @@
                 <tr>
                     <td class="label">属性：</td>
                 </tr>
-
             </table>
+            <style type="text/css">
+                .upload-pre-item{
+                    position: relative;
+                }
+                .upload-pre-item a{
+                    position: absolute;
+                    right: 5px;
+                    top: 0px;
+                    width: 5px;
+                }
+            </style>
             <table style="display: none" class="form-table" width="90%" id="general-table" align="center">
                 <tr>
-                    <td class="label">相册：</td>
+                    <td>
+                        <div id="gallery" class="upload-img-box">
+                            <?php  foreach($galleryImg as $gallery){  ?>
+                            <div class="upload-pre-item">
+                                <img src="<?php echo $gallery['pic']; ?>">
+                                <a href="javascript:void(0)" galley_id="<?php echo $gallery['id']; ?>">X</a>
+                            </div>
+                            <?php  }  ?>
+                        </div>
+                    </td>
                 </tr>
-
+                <script>
+                    $(function(){
+                        //live给所有匹配的元素附加一个事件处理函数，即使这个元素是以后再添加进来的也有效。
+                        $('.upload-pre-item a').live('click',function(){
+                            var gallery_id = $(this).attr('galley_id');
+                            if(!gallery_id){        //当获取不到ID,直接删除
+                                $(this).parent().remove();
+                                return false;
+                            }
+                            var now = this;
+                            $.post('/goods/remove-img',{'gallery_id':gallery_id},function(data){
+                                if(data.status){
+                                    $(now).parent().remove();
+                                }
+                            },'json')
+                        })
+                    })
+                </script>
+                <tr>
+                    <td><input type="file" id="upload-gallery"/></td>
+                </tr>
             </table>
             <table style="display: none" class="form-table" width="90%" id="general-table" align="center">
                 <tr>
@@ -172,14 +214,41 @@
             }
             /***********************在线编辑器结束************************************/
         });
-        /**商品页面切换**/
-        /*图片上传*/
-        $(":radio[name='status']").val([<?php if(!empty($commonData['status'])){echo $commonData['status'];}else{echo 1;} ?>]);
-        /**图片上传**/
-        $('#upload-logo').uploadify({  //将指定的上传表单替换成Uploadify上传
+        /**商品相册上传**/
+        $('#upload-gallery').uploadify({  //将指定的上传表单替换成Uploadify上传
             'swf'      : '/uploadify/uploadify.swf',    //指定flash的路径,该路径必须是一个相对路径,不能够是一个http的网络地址
             'uploader' : "/upload/add", //处理上传文件的后台PHP代码
             // 'fileObjName' : 'logo',  以FileData上传到服务器上
+            'height' : 25,   //指定上传按钮的高
+            'width' : 150,   //指定上传按钮的宽
+            "buttonText"      : "上传图片", //指定上传按钮上的文字
+            // 'formData'      : {'dir' : 'brand'},  //上传时传递过去的参数,用来指定上传到哪个空间中
+            'fileTypeExts' : '*.gif; *.jpg; *.png;*.bmp;*.jpeg',  //限定上传的文件类型
+            'debug'    : false,   //是否处于调试模式
+            'multi': true,          //多文件上传
+            'onUploadSuccess' : function(file,data){  //上传成功后处理, data为ajax返回的数据
+                eval('var data = '+data); //将json字符串变成json对象
+               console.log(data);
+                if(data.status){ //上传成功之后取出data中的pic,将图片地址设置到到图片的src中和隐藏域中
+                    var itemHTML =  '<div class="upload-pre-item">'+
+                                        '<img src="'+data.save_url+'">'+
+                                        '<input type="hidden" name="gallery[]" value="'+data.save_url+'"/>'+
+                                        '<a href="javascript:void(0)">X</a>'+
+                                    '</div>'
+                    $('#gallery').append(itemHTML);
+                }
+                //updateAlert(data);
+            },
+            'onFallback' : function(){ //失败后的处理方案
+                alert('未检测到兼容版本的Flash.');
+            }
+        });
+        /*图片上传*/
+        /**图片LOGO上传**/
+        $('#upload-logo').uploadify({  //将指定的上传表单替换成Uploadify上传
+            'swf'      : '/uploadify/uploadify.swf',    //指定flash的路径,该路径必须是一个相对路径,不能够是一个http的网络地址
+            'uploader' : "/upload/add", //处理上传文件的后台PHP代码
+            // 'fileObjName' : 'logo',  默认以FileData上传到服务器上
             'height' : 25,   //指定上传按钮的高
             'width' : 150,   //指定上传按钮的宽
             "buttonText"      : "上传图片", //指定上传按钮上的文字

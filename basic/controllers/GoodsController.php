@@ -11,6 +11,7 @@ namespace app\controllers;
 use app\models\Brand;
 use app\models\Category;
 use app\models\Goods;
+use app\models\GoodsGallery;
 use app\models\GoodsMemberPrice;
 use app\models\Rank;
 use app\models\Supplier;
@@ -71,8 +72,6 @@ class GoodsController extends BaseController{
         $GoodsModel =    new Goods();
         $info          =    $app->bodyParams;
         if($app->isPost){
-
-            #$GoodsModel->setAttributes($info);
             $result = $this->GoodsSave($info);
             if($result){
                 Method::exit_json(1,'操作成功','/'.$this->location_url.'/index');
@@ -82,17 +81,21 @@ class GoodsController extends BaseController{
         }else{
             $id          = $app->get('id');
             $commonData  = $GoodsModel::find()->where(['id'=>$id])->one();
+            $rankPrice   = GoodsMemberPrice::find()->where(['goods_id'=>$id])->all();
+            $galleryImg  = GoodsGallery::find()->where(['goods_id'=>$id])->all();
             $view        = Yii::$app->view;
             $view->params['layoutData'] =  $this->title.'列表';
             $view->params['controller'] =  $this->location_url;
             $view->params['action']     =  'index';
             $data                         =  $this->edit_view_before();
             return $this->render('edit',
-                ['commonData'=>$commonData,
-                    'tree'   =>$data['tree'],
-                    'brand'  =>$data['brand'],
-                    'supplier'=>$data['supplier'],
-                    'rank'    =>$data['rank'],
+                ['commonData'  => $commonData,
+                    'tree'      => $data['tree'],
+                    'brand'     => $data['brand'],
+                    'supplier'  => $data['supplier'],
+                    'rank'       => $data['rank'],
+                    'rankPrice' => $rankPrice,
+                    'galleryImg'=> $galleryImg,
                 ]
             );
         }
@@ -102,15 +105,19 @@ class GoodsController extends BaseController{
         $GoodsModel =    new Goods();
         $goodsDate = $info['goods'];
         $numberPrice = $info['numberPrice'];
+        $gallery = $info['gallery'];
         $transaction   = Yii::$app->db->beginTransaction();
         try {
             if(!empty($goodsDate['id'])){
                 $GoodsModel::updateAll($goodsDate,'id=:id',array(':id'=>$goodsDate['id']));
                 $result = $this->memberPrice($numberPrice,$goodsDate['id']);
+                $this->gallery($gallery,$goodsDate['id']);
             }else{
                 $goodsDate['createTime'] = time();
                 $GoodsModel->setAttributes($goodsDate);
                 $GoodsModel->save();
+                $this->memberPrice($numberPrice,$GoodsModel->id);
+                $this->gallery($gallery,$GoodsModel->id);
                 $result = Goods::updateAll(['sn'=>Method::_setNumberId('S')],'id=:id',array(':id'=>$GoodsModel->id));
             }
             $transaction->commit();
@@ -129,16 +136,36 @@ class GoodsController extends BaseController{
         foreach($numberPrice as $k=>$v){
             $memberPriceArr[] = array('goods_id'=>$goodsId,'rank_id'=>$k,'price'=>$v);
         }
-        $memberPriceModel = new GoodsMemberPrice();
         foreach($memberPriceArr as $price){
-
+            //创建这个model对象的时候,不能放在foreach外面,否则入库时,(针对改数据$price会隔行丢失goods_id的数据)
+            $memberPriceModel = new GoodsMemberPrice();
             $memberPriceModel->setAttributes($price);
-            $result = $memberPriceModel->save();
-            #$result = GoodsMemberPrice::updateAll($price,'goods_id=:id',array(':id'=>$goodsId));
+            $result = $memberPriceModel->insert();
         }
         return $result?true:false;
     }
-
+    private function gallery($gallery,$goodsId){
+        $galleryArr = array();
+        foreach($gallery as $pic){
+            $galleryArr[]= array('goods_id'=>$goodsId,'pic'=>$pic);
+        }
+        foreach($galleryArr as $arr){
+            $galleryModel = new GoodsGallery();
+            $galleryModel->setAttributes($arr);
+            $result = $galleryModel->save();
+        }
+        return $result?true:false;
+    }
+    public function actionRemoveImg(){
+        $app           =    Yii::$app->request;
+        $info          =    $app->bodyParams;
+        $galleryRow = GoodsGallery::find()->where(['id'=>$info['gallery_id']])->one();
+        if($galleryRow->delete()){
+            Method::exit_json(1);
+        }else{
+            Method::exit_json(0);
+        }
+    }
     //准备页面数据
     protected function edit_view_before(){
         //分类的数据
