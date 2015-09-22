@@ -2,18 +2,40 @@
 Navicat MySQL Data Transfer
 
 Source Server         : localhost_3306
-Source Server Version : 50524
+Source Server Version : 50520
 Source Host           : localhost:3306
 Source Database       : jd
 
 Target Server Type    : MYSQL
-Target Server Version : 50524
+Target Server Version : 50520
 File Encoding         : 65001
 
-Date: 2015-09-22 17:14:12
+Date: 2015-09-22 23:37:31
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `jd_attribute`
+-- ----------------------------
+DROP TABLE IF EXISTS `jd_attribute`;
+CREATE TABLE `jd_attribute` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
+  `goodsType_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '商品类型Id',
+  `name` varchar(50) NOT NULL DEFAULT '' COMMENT '名称',
+  `type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '类型@radio|1=唯一,2=多值',
+  `input_type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '类型@radio|1=手工写入,2=下拉选择,3=多行文本',
+  `value` varchar(255) NOT NULL DEFAULT '' COMMENT '备选值@textarea',
+  `sort` tinyint(4) NOT NULL DEFAULT '0' COMMENT '排序',
+  `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否显示@radio|1=是,0=否',
+  `intro` text COMMENT '描述',
+  `createTime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '添加时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品属性';
+
+-- ----------------------------
+-- Records of jd_attribute
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for `jd_brand`
@@ -28,36 +50,13 @@ CREATE TABLE `jd_brand` (
   `intro` text COMMENT '简介',
   `createTime` int(11) NOT NULL DEFAULT '0' COMMENT '添加时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COMMENT='商品供应商';
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COMMENT='商品供应商';
 
 -- ----------------------------
 -- Records of jd_brand
 -- ----------------------------
-INSERT INTO `jd_brand` VALUES ('1', '华1', '/uploads/55f5485446da8.png', '12', '1', '华为华为华为华为', '1442116076');
-INSERT INTO `jd_brand` VALUES ('2', '华为1', '/uploads/55f5485446da8.png', '1', '1', '华为华为', '12');
-INSERT INTO `jd_brand` VALUES ('3', '诺基亚1', '/uploads/55f5485446da8.png', '2', '1', '诺基亚诺基亚诺基亚诺基亚', '1442116508');
-INSERT INTO `jd_brand` VALUES ('4', '三星1', '/uploads/55f5485446da8.png', '1', '1', '三星三星三星三星', '1442116547');
-INSERT INTO `jd_brand` VALUES ('5', '移动', '/uploads/55f5485446da8.png', '1', '1', '移动移动移动移动', '1442116599');
-INSERT INTO `jd_brand` VALUES ('6', '诺基亚1', '/uploads/55f5485446da8.png', '1', '1', '诺基亚1', '1442116884');
-INSERT INTO `jd_brand` VALUES ('7', '移动', '/uploads/55f5485446da8.png', '1', '2', '移动', '1442116898');
-INSERT INTO `jd_brand` VALUES ('8', '网页', '/uploads/55f5485446da8.png', '1', '1', '网页网页网页', '1442137776');
-INSERT INTO `jd_brand` VALUES ('9', 'img成功', '/uploads/55f5485446da8.png', '1', '1', 'img成功img成功img成功img成功', '1442138036');
-INSERT INTO `jd_brand` VALUES ('10', '华为', '/uploads/55f5485446da8.png', '1', '1', '123123', '1442138201');
-INSERT INTO `jd_brand` VALUES ('11', '华为', '/uploads/55f54a2b2e6c6.png', '1', '1', '321321', '1442138673');
-INSERT INTO `jd_brand` VALUES ('12', '华为', '/uploads/55f54a2b2e6c6.png', '1', '1', '111111111111', '1442138736');
-INSERT INTO `jd_brand` VALUES ('13', '华为', '/uploads/55f54a2b2e6c6.png', '1', '1', '33333333333', '1442138746');
-INSERT INTO `jd_brand` VALUES ('14', '华为', '/uploads/55f54abfc85ac.png', '1', '1', '7777777777777777777', '1442138821');
-INSERT INTO `jd_brand` VALUES ('15', '12', '', '123', '0', '23', '1442138930');
-INSERT INTO `jd_brand` VALUES ('16', '12', '', '12', '0', '12', '1442138981');
-INSERT INTO `jd_brand` VALUES ('17', '123', '', '123', '0', '123', '1442139039');
-INSERT INTO `jd_brand` VALUES ('18', '华为88888', '/uploads/55f54d2cdc41f.png', '1', '2', '华为88888', '1442139079');
-INSERT INTO `jd_brand` VALUES ('19', '华为1111', '/uploads/55f54bdf3a20b.png', '1', '1', '华为111', '1442139105');
-INSERT INTO `jd_brand` VALUES ('20', '华为', '', '12', '0', '1', '1442139166');
-INSERT INTO `jd_brand` VALUES ('21', '2', '', '2', '0', '222', '1442139174');
-INSERT INTO `jd_brand` VALUES ('22', '图片上传', '/uploads/55f632bc63cf5.gif', '11', '1', '图片上传图片上传图片上传', '1442198215');
-INSERT INTO `jd_brand` VALUES ('23', '', '', '1', '1', null, '0');
-INSERT INTO `jd_brand` VALUES ('24', '22222', '/uploads/55f68ef461711.jpg', '2', '1', '22222', '1442221906');
-INSERT INTO `jd_brand` VALUES ('25', '123', '/uploads/55f68f7ec390d.jpg', '123', '0', '123', '1442221952');
+INSERT INTO `jd_brand` VALUES ('27', '宝宝11', '/uploads/5601578fafbe4.png', '3', '1', '宝宝11宝宝11', '1442928532');
+INSERT INTO `jd_brand` VALUES ('26', '华为1', '/uploads/560157528dee3.png', '2', '1', '华为1', '1442928508');
 
 -- ----------------------------
 -- Table structure for `jd_category`
@@ -180,6 +179,28 @@ INSERT INTO `jd_goodsmemberprice` VALUES ('2', '8', '3.00');
 INSERT INTO `jd_goodsmemberprice` VALUES ('13', '6', '22.00');
 INSERT INTO `jd_goodsmemberprice` VALUES ('13', '7', '33.00');
 INSERT INTO `jd_goodsmemberprice` VALUES ('13', '8', '44.00');
+
+-- ----------------------------
+-- Table structure for `jd_goodstype`
+-- ----------------------------
+DROP TABLE IF EXISTS `jd_goodstype`;
+CREATE TABLE `jd_goodstype` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
+  `name` varchar(50) NOT NULL DEFAULT '' COMMENT '名称',
+  `sort` tinyint(4) NOT NULL DEFAULT '0' COMMENT '排序',
+  `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否显示@radio|1=是,0=否',
+  `intro` text COMMENT '描述',
+  `createTime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '添加时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='商品类型';
+
+-- ----------------------------
+-- Records of jd_goodstype
+-- ----------------------------
+INSERT INTO `jd_goodstype` VALUES ('1', '手机', '50', '1', '手机', '1442929018');
+INSERT INTO `jd_goodstype` VALUES ('2', '电脑', '50', '1', '电脑', '1442929118');
+INSERT INTO `jd_goodstype` VALUES ('3', '相机', '50', '1', '相机', '1442929129');
+INSERT INTO `jd_goodstype` VALUES ('4', '衣服', '50', '1', '衣服', '1442929140');
 
 -- ----------------------------
 -- Table structure for `jd_rank`

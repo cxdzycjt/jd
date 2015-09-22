@@ -63,6 +63,7 @@ class BaseController extends Controller{
                     Method::exit_json(0,'操作失败');
                 }
             }else{
+                var_dump($info);die;
                 if($supplierModel->save()){
                     $this->_goods_sn($supplierModel->id);
                     Method::exit_json(1,'操作成功','/'.$this->location_url.'/index');
@@ -81,10 +82,11 @@ class BaseController extends Controller{
             $data                         =  $this->edit_view_before();
             return $this->render('edit',
                 ['commonData'=>$commonData,
-                    'tree'   =>$data['tree'],
-                    'brand'  =>$data['brand'],
-                    'supplier'=>$data['supplier'],
-                    'rank'    =>$data['rank'],
+                    'tree'   =>isset($data['tree'])?$data['tree']:'',
+                    'brand'  =>isset($data['brand'])?$data['brand']:'',
+                    'supplier'=>isset($data['supplier'])?$data['supplier']:'',
+                    'rank'    =>isset($data['rank'])?$data['rank']:'',
+                    'goodsType' =>isset($data['goodsType'])?$data['goodsType']:'',
                 ]
             );
         }

@@ -99,9 +99,29 @@ create table jd_goodsGallery(
   pic varchar(100)   not null default '' comment '图片地址'
 )engine=InnoDB default charset utf8 comment '商品相册';
 
+#8.商品类型
+create table jd_goodsType(
+  id int UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT 'Id',
+  name varchar(50) not null default '' comment '名称',
+  sort tinyint not null default 0 comment '排序',
+  status tinyint not null default 0 comment '是否显示@radio|1=是,0=否',
+  intro text comment '描述',
+  createTime int UNSIGNED not null default 0 comment '添加时间'
+)engine=InnoDB default charset utf8 comment '商品类型';
 
-
-
+#9.商品属性
+create table jd_attribute(
+  id int UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT 'Id',
+  goodsType_id int UNSIGNED not null default 0 COMMENT '商品类型Id',
+  name varchar(50) not null default '' comment '名称',
+  type tinyint not null default 0 comment '类型@radio|1=唯一,2=多值',
+  input_type tinyint not null default 0 comment '录入类型@radio|1=手工写入,2=下拉选择,3=多行文本',
+  value varchar(255) not null default '' comment '备选值@textarea',
+  sort tinyint not null default 0 comment '排序',
+  status tinyint not null default 0 comment '是否显示@radio|1=是,0=否',
+  intro text comment '描述',
+  createTime int UNSIGNED not null default 0 comment '添加时间'
+)engine=InnoDB default charset utf8 comment '商品属性';
 
 
 

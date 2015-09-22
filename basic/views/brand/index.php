@@ -11,9 +11,9 @@
         <table cellpadding="3" cellspacing="1">
             <tr>
                 <th align="left"><input class="J_check_all"  type="checkbox"/>编号</th>
-                <th>品牌</th>
                 <th>品牌名称</th>
-                <th>排序LOGO</th>
+                <th>排序</th>
+                <th>LOGO</th>
                 <th>是否显示</th>
                 <th>添加时间</th>
                 <th>操作</th>
