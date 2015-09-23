@@ -4,6 +4,7 @@
  * User: Administrator
  * Date: 15-9-14
  * Time: 上午10:44
+ * 公共方法CURD
  */
 
 namespace app\controllers;
@@ -17,7 +18,9 @@ class BaseController extends Controller{
 
     public $layout='admin';
 
-
+/*
+ * 页面列表页面
+ */
     public function actionIndex(){
         $model_class   =    $this->model_class;
 
@@ -47,7 +50,9 @@ class BaseController extends Controller{
         );
         return $this->render('index',$data);
     }
-
+/*
+ * 添加和修改
+ */
     public function actionEdit(){
         $model_class   =    $this->model_class;
         $app           =    Yii::$app->request;
@@ -90,12 +95,21 @@ class BaseController extends Controller{
             );
         }
     }
+/*
+ * 钩子方法
+ */
     protected function _goods_sn($sn){
 
     }
+/*
+ * 钩子方法
+ */
     protected function edit_view_before(){
 
     }
+ /*
+  * 删除/批量删除
+  */
     public function actionDel(){
         $model_class   =    $this->model_class;
         $app           =    Yii::$app->request;
@@ -118,6 +132,9 @@ class BaseController extends Controller{
             Method::exit_json(0,'操作失败');
         }
     }
+/*
+ * 修改状态
+ */
     public function actionStatus(){
         $model_class   =    $this->model_class;
         $app           =     Yii::$app->request;
@@ -134,6 +151,9 @@ class BaseController extends Controller{
             Method::exit_json(0,'操作失败');
         }
     }
+/*
+ * 删除,暂时不写删除
+ */
     public function actionRemove(){
         $model_class   =    $this->model_class;
         $app           =     Yii::$app->request;
