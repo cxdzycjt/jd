@@ -7,8 +7,8 @@
  */
 
 namespace app\models;
-
-
+use Method;
+use yii;
 use yii\db\ActiveRecord;
 
 class Attribute extends ActiveRecord{
@@ -23,5 +23,17 @@ class Attribute extends ActiveRecord{
             [['goodsType_id','name','type','input_type','value','sort','status','intro','createTime'], 'required'],
 
         ];
+    }
+    public static function getAttributeList($id){
+        $app = Yii::$app->db;
+        $sql = "select * from {{%Attribute}} where status>0";
+        $rows = $app->createCommand($sql)->queryAll();
+
+        foreach($rows as &$row){
+            if(!empty($row['value'])){
+                $row['value'] = Method::str2arr($row['value'],',');
+            }
+        }
+        return $rows;
     }
 }

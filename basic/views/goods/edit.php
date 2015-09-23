@@ -2,7 +2,17 @@
 <script type="text/javascript" src="/js/jquery.ztree.core-3.5.js"></script>
 <script type="text/javascript" charset="utf-8" src="/ueditor1_4_3/ueditor.config.js"></script>
 <script type="text/javascript" charset="utf-8" src="/ueditor1_4_3/ueditor.all.min.js"></script>
-
+<style type="text/css">
+    .upload-pre-item{
+        position: relative;
+    }
+    .upload-pre-item a{
+        position: absolute;
+        right: 5px;
+        top: 0px;
+        width: 5px;
+    }
+</style>
 <div class="tab-div">
     <div id="tabbar-div">
         <p>
@@ -130,20 +140,21 @@
             </table>
             <table style="display: none" class="form-table" width="90%" id="general-table" align="center">
                 <tr>
-                    <td class="label">属性：</td>
+                    <td class="" style="text-align: right">商品类型：</td>
+                    <td class="">
+                        <select name="goods[goodsType_id]" id="goods[goodsType_id]">
+                            <option value="">-请选择-</option>
+                            <?php foreach($goodsType as $type){   ?>
+                                <option value="<?php echo $type['id'];?>"><?php echo $type['name'];?></option>
+                            <?php  }  ?>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="" colspan="2"><hr></td>
                 </tr>
             </table>
-            <style type="text/css">
-                .upload-pre-item{
-                    position: relative;
-                }
-                .upload-pre-item a{
-                    position: absolute;
-                    right: 5px;
-                    top: 0px;
-                    width: 5px;
-                }
-            </style>
+
             <table style="display: none" class="form-table" width="90%" id="general-table" align="center">
                 <tr>
                     <td>
@@ -157,24 +168,6 @@
                         </div>
                     </td>
                 </tr>
-                <script>
-                    $(function(){
-                        //live给所有匹配的元素附加一个事件处理函数，即使这个元素是以后再添加进来的也有效。
-                        $('.upload-pre-item a').live('click',function(){
-                            var gallery_id = $(this).attr('galley_id');
-                            if(!gallery_id){        //当获取不到ID,直接删除
-                                $(this).parent().remove();
-                                return false;
-                            }
-                            var now = this;
-                            $.post('/goods/remove-img',{'gallery_id':gallery_id},function(data){
-                                if(data.status){
-                                    $(now).parent().remove();
-                                }
-                            },'json')
-                        })
-                    })
-                </script>
                 <tr>
                     <td><input type="file" id="upload-gallery"/></td>
                 </tr>
@@ -197,6 +190,21 @@
     $(function(){
         $(":radio[name='goods[is_on_sale]']").val([<?php if(!empty($commonData['is_on_sale'])){echo $commonData['is_on_sale'];}else{echo 1;} ?>]);
         $(":radio[name='goods[store_type]']").val([<?php if(!empty($commonData['store_type'])){echo $commonData['store_type'];}else{echo 1;} ?>]);
+        //live给所有匹配的元素附加一个事件处理函数，即使这个元素是以后再添加进来的也有效。
+        $('.upload-pre-item a').live('click',function(){
+            var gallery_id = $(this).attr('galley_id');
+            if(!gallery_id){        //当获取不到ID,直接删除
+                $(this).parent().remove();
+                return false;
+            }
+            var now = this;
+            $.post('/goods/remove-img',{'gallery_id':gallery_id},function(data){
+                if(data.status){
+                    $(now).parent().remove();
+                }
+            },'json')
+        })
+
         /**商品页面切换**/
         $('#tabbar-div span').click(function(){
             $('#tabbar-div span').removeClass('tab-front').addClass('tab-back');
@@ -301,5 +309,15 @@
             $("#category_text").val(goodsCategoryNode.name);
         }else{
         }
+        /*****商品属性****/
+        $("#goods\\[goodsType_id\\]").change(function(){
+            var goodsType_id = $(this).val();
+            if(goodsType_id==''){
+                return false;
+            }
+            $.getJSON('/attribute/rows',{'id':goodsType_id},function(data){
+                console.log(data)
+            })
+        })
     })
 </script>

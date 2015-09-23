@@ -27,14 +27,14 @@
                     <td align="center"><?php echo $type['sort']; ?></td>
                     <td align="center"><?php echo $type['intro']; ?></td>
                     <td align="center">
-                        <a class="ajax-get refresh" href="/brand/status/<?php echo $type['id']; ?>/<?php echo $type['status']; ?>">
+                        <a class="ajax-get refresh" href="/goods-type/status/<?php echo $type['id']; ?>/<?php echo $type['status']; ?>">
                             <img src="/img/<?php echo $type['status']; ?>.gif">
                         </a>
                     </td>
                     <td align="center"><?php echo date('Y-m-d H:i:s',$type['createTime']); ?></td>
                     <td align="center">
-                        <a href="/brand/edit/<?php echo $type['id']; ?>" title="编辑">编辑</a> |
-                        <a class="ajax-get refresh"  href="/brand/del/<?php echo $type['id']; ?>" title="移除">移除</a>
+                        <a href="/goods-type/edit/<?php echo $type['id']; ?>" title="编辑">编辑</a> |
+                        <a class="ajax-get refresh"  href="/goods-type/del/<?php echo $type['id']; ?>" title="移除">移除</a>
                     </td>
                 </tr>
             <?php   }   ?>

@@ -2,7 +2,12 @@
 <div class="form-div">
     <form action="/attribute/index" name="searchForm">
         <img src="/img/icon_search.gif" width="26" height="22" border="0" alt="search" />
-        <input type="text" name="name" size="15" value="<?php echo $name; ?>" />
+        <select name="goodsType_id">
+            <option value="">-请选择-</option>
+            <?php  foreach($goodsType as $type){   ?>
+                <option <?php if($goodsType_id==$type['id']){echo 'selected';} ?> value="<?php echo $type['id'];?>"><?php echo $type['name'];?></option>
+            <?php  }  ?>
+        </select>
         <input type="submit" value=" 搜索 " class="button" />
     </form>
 </div>
@@ -28,9 +33,15 @@
                 <tr>
                     <td class="first-cell" align="left"><input type="checkbox" name="id[]" value="<?php echo $attribute['id']?>"/><?php echo $attribute['id']?></td>
                     <td class="first-cell" align="center"><?php echo $attribute['name']; ?></td>
-                    <td class="first-cell" align="center"><?php echo $attribute['goodsType_id']; ?></td>
-                    <td class="first-cell" align="center"><?php echo $attribute['type']; ?></td>
-                    <td class="first-cell" align="center"><?php echo $attribute['input_type']; ?></td>
+                    <td class="first-cell" align="center">
+                        <?php  foreach($goodsType as $type){if($attribute['goodsType_id']==$type['id']){echo $type['name']; }} ?>
+                    </td>
+                    <td class="first-cell" align="center">
+                        <?php if($attribute['type']==1){echo '唯一';}else{echo '多值';} ?>
+                    </td>
+                    <td class="first-cell" align="center">
+                        <?php if($attribute['input_type']==1){echo '手工录入';}elseif($attribute['input_type']==2){echo '列表选择';}else{echo '多行文本框';} ?>
+                    </td>
                     <td class="first-cell" align="center"><?php echo $attribute['value']; ?></td>
                     <td align="center"><?php echo $attribute['sort']; ?></td>
                     <td align="center"><?php echo $attribute['intro']; ?></td>

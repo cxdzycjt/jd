@@ -12,11 +12,11 @@
             <tr>
                 <td class="label">商品类型</td>
                 <td>
-                    <select style="width: 145px;">
+                    <select style="width: 145px;" name="goodsType_id">
                         <option value="">请选择....</option>
                         <?php
                         foreach($goodsType as $type){   ?>
-                            <option value="<?php echo $type['id']; ?>"><?php echo $type['name']; ?></option>
+                            <option <?php  if($commonData['goodsType_id']==$type['id']){echo 'selected';} ?> value="<?php echo $type['id']; ?>"><?php echo $type['name']; ?></option>
                         <?php  }  ?>
                     </select>
                 </td>
@@ -24,16 +24,16 @@
             <tr>
                 <td class="label">属性</td>
                 <td>
-                    <input type="radio" name="type" value="1"/> 唯一
-                    <input type="radio" name="type" value="2"/> 多值
+                    <input type="radio" name="type" value="1" <?php if($commonData['type']==1){echo 'checked';} ?>/> 唯一
+                    <input type="radio" name="type" value="2" <?php if($commonData['type']==2){echo 'checked';} ?>/> 多值
                 </td>
             </tr>
             <tr>
                 <td class="label">录入类型</td>
                 <td>
-                    <input type="radio" name="input_type" value="1"/> 手工录入
-                    <input type="radio" name="input_type" value="2"/> 从下面的列表中选择(一行代表一个可选值)
-                    <input type="radio" name="input_type" value="3"/> 多行文本框
+                    <input type="radio" name="input_type" value="1" <?php if($commonData['input_type']==1){echo 'checked';} ?>/> 手工录入
+                    <input type="radio" name="input_type" value="2" <?php if($commonData['input_type']==2){echo 'checked';} ?>/> 从下面的列表中选择(一行代表一个可选值)
+                    <input type="radio" name="input_type" value="3" <?php if($commonData['input_type']==3){echo 'checked';} ?>/> 多行文本框
                 </td>
             </tr>
             <tr>
@@ -105,6 +105,22 @@
                 $('#textValue').attr('disabled','disabled')
             }
         });
+        /****编辑时类型选择*****/
+        var attribute_id = <?php echo  $commonData['id']?$commonData['id']:"''"; ?>;
+        if(attribute_id != ''){
+            var type = <?php echo  $commonData['type']?$commonData['type']:"''"; ?>;
+            var input_type = <?php echo  $commonData['input_type']?$commonData['input_type']:"''"; ?>;
+            if(type==1){
+                if(input_type!==2){
+                   $('#textValue').attr('disabled','disabled');
+                }else{
+                    $('#textValue').removeAttr('disabled');
+                }
+            }else{
+                $('#textValue').removeAttr('disabled');
+            }
+        }
+
     });
 
 </script>

@@ -13,6 +13,7 @@ use app\models\Category;
 use app\models\Goods;
 use app\models\GoodsGallery;
 use app\models\GoodsMemberPrice;
+use app\models\GoodsType;
 use app\models\Rank;
 use app\models\Supplier;
 use yii;
@@ -95,6 +96,7 @@ class GoodsController extends BaseController{
                     'brand'     => $data['brand'],
                     'supplier'  => $data['supplier'],
                     'rank'       => $data['rank'],
+                    'goodsType'       => $data['goodsType'],
                     'rankPrice' => $rankPrice,
                     'galleryImg'=> $galleryImg,
                 ]
@@ -178,11 +180,13 @@ class GoodsController extends BaseController{
         $supplier = Supplier::find()->andWhere(" status > 0 ")->all();
         //会员数据
         $rank  = Rank::find()->andWhere(" status > 0 ")->all();
+        $goodsType =  GoodsType::find()->select(array('id','name'))->andWhere(" status > 0 ")->orderBy('sort desc')->all();
         return array(
             'tree'     => $tree,
             'brand'    => $brand,
             'supplier' =>$supplier,
             'rank'    =>$rank,
+            'goodsType'=>$goodsType,
         );
     }
 

@@ -24,10 +24,16 @@ class BaseController extends Controller{
     public function actionIndex(){
         $model_class   =    $this->model_class;
 
-        $app           =     Yii::$app->request;
+        $app           =    Yii::$app->request;
 
         $name          =    $app->get('name');
-        $sql       =    "name like '%$name%' and status>0";
+        $goodsType_id          =    $app->get('goodsType_id');
+        $sql           =    'status>0';
+        if(!empty($name)){
+            $sql       .=    " AND name like '%$name%'";
+        }elseif(!empty($goodsType_id)){
+            $sql       .=    " AND type = $goodsType_id";
+        }
         $data          =    $model_class::find()->andWhere($sql)->orderBy('createTime desc');
 
         $total         =    $data->count();
@@ -44,9 +50,11 @@ class BaseController extends Controller{
             'total'   => $total,
             'pages'   => $pages,
             'name'    => isset($name)?$name:'',
+            'goodsType_id'    => isset($goodsType_id)?$goodsType_id:'',
             'supplier'=> isset($data['supplier'])?$data['supplier']:'',
             'brand'   => isset($data['brand'])?$data['brand']:'',
             'category'=> isset($data['tree'])?$data['tree']:'',
+            'goodsType' =>isset($data['goodsType'])?$data['goodsType']:'',
         );
         return $this->render('index',$data);
     }
@@ -68,6 +76,7 @@ class BaseController extends Controller{
                     Method::exit_json(0,'操作失败');
                 }
             }else{
+                #var_dump($supplierModel->save());die;
                 if($supplierModel->save()){
                     $this->_goods_sn($supplierModel->id);
                     Method::exit_json(1,'操作成功','/'.$this->location_url.'/index');
