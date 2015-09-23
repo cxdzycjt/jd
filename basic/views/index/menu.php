@@ -127,6 +127,7 @@
                 商品管理
                 <ul>
                     <li class="menu-item"><a href="/goods/index" target="main-frame">商品列表</a></li>
+                    <li class="menu-item"><a href="/supplier/index" target="main-frame">供应商</a></li>
                     <li class="menu-item"><a href="/category/index" target="main-frame">商品分类</a></li>
                     <li class="menu-item"><a href="/brand/index" target="main-frame">商品品牌</a></li>
                     <li class="menu-item"><a href="/trash/index" target="main-frame">商品回收站</a></li>
@@ -147,6 +148,7 @@
                 会员管理
                 <ul>
                     <li class="menu-item"><a href="userList.html" target="main-frame">会员列表</a></li>
+                    <li class="menu-item"><a href="/rank/index" target="main-frame">会员等级管理</a></li>
                     <li class="menu-item"><a href="userAdd.html" target="main-frame">添加会员</a></li>
                     <li class="menu-item"><a href="userMessage.html" target="main-frame">会员留言</a></li>
                 </ul>

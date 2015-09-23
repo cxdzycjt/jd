@@ -21,10 +21,12 @@
     </style>
 </head>
 <body>
-<h1>
-    <span class="action-span"><a href="/<?php echo $this->params['controller']?>/<?php echo $this->params['action']?>"><?php echo $this->params['layoutData']?></a></span>
+<h1 >
+    <span class="action-span" style="display: <?php if($this->params['controller']=='trash'){echo 'none';}  ?>">
+        <a href="/<?php echo $this->params['controller']?>/<?php echo $this->params['action']?>"><?php echo $this->params['layoutData']?></a>
+    </span>
     <span class="action-span1"><a href="#">ECSHOP 管理中心</a></span>
-    <span id="search_id" class="action-span1"> - 品牌管理</span>
+    <span id="search_id" class="action-span1"> - 后台管理</span>
     <div style="clear:both"></div>
 </h1>
 <!--提示框-->

@@ -41,9 +41,9 @@ class BaseController extends Controller{
             'total'   => $total,
             'pages'   => $pages,
             'name'    => isset($name)?$name:'',
-            'supplier'=> $data['supplier'],
-            'brand'   => $data['brand'],
-            'category'=> $data['tree'],
+            'supplier'=> isset($data['supplier'])?$data['supplier']:'',
+            'brand'   => isset($data['brand'])?$data['brand']:'',
+            'category'=> isset($data['tree'])?$data['tree']:'',
         );
         return $this->render('index',$data);
     }
@@ -63,7 +63,6 @@ class BaseController extends Controller{
                     Method::exit_json(0,'操作失败');
                 }
             }else{
-                var_dump($info);die;
                 if($supplierModel->save()){
                     $this->_goods_sn($supplierModel->id);
                     Method::exit_json(1,'操作成功','/'.$this->location_url.'/index');

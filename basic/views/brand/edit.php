@@ -43,7 +43,6 @@
             <tr>
                 <td colspan="2" align="center"><br />
                     <input type="button" class="button ajax-post" value=" 确定 " />
-                    <input type="submit"  value=" 确定 " />
                     <input type="reset" class="button" value=" 重置 " />
                 </td>
             </tr>
