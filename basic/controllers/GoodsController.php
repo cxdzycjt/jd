@@ -14,6 +14,7 @@ use app\models\Goods;
 use app\models\GoodsGallery;
 use app\models\GoodsMemberPrice;
 use app\models\GoodsType;
+use app\models\Particulars;
 use app\models\Rank;
 use app\models\Supplier;
 use yii;
@@ -108,20 +109,35 @@ class GoodsController extends BaseController{
         $GoodsModel =    new Goods();
         $goodsDate = $info['goods'];
         $numberPrice = $info['numberPrice'];
-        $gallery = $info['gallery'];
+        $gallery = isset($info['gallery'])?$info['gallery']:'';
+        $attribute = isset($info['attribute'])?$info['attribute']:'';
         $transaction   = Yii::$app->db->beginTransaction();
         try {
             if(!empty($goodsDate['id'])){
                 $GoodsModel::updateAll($goodsDate,'id=:id',array(':id'=>$goodsDate['id']));
-                $result = $this->memberPrice($numberPrice,$goodsDate['id']);
-                $this->gallery($gallery,$goodsDate['id']);
+                if(!empty($gallery)){
+                    $result = $this->memberPrice($numberPrice,$goodsDate['id']);
+                }
+                if(!empty($gallery)){
+                    $result = $this->gallery($gallery,$goodsDate['id']);
+                }
+                if(!empty($attribute)){
+                    $result = $this->particulars($attribute,$goodsDate['id']);
+                }
             }else{
                 $goodsDate['createTime'] = time();
                 $GoodsModel->setAttributes($goodsDate);
                 $GoodsModel->save();
-                $this->memberPrice($numberPrice,$GoodsModel->id);
-                $this->gallery($gallery,$GoodsModel->id);
                 $result = Goods::updateAll(['sn'=>Method::_setNumberId('S')],'id=:id',array(':id'=>$GoodsModel->id));
+                if(!empty($numberPrice)){
+                    $result = $this->memberPrice($numberPrice,$GoodsModel->id);
+                }
+                if(!empty($gallery)){
+                    $result = $this->gallery($gallery,$GoodsModel->id);
+                }
+                if(!empty($attribute)){
+                    $result = $this->particulars($attribute,$GoodsModel->id);
+                }
             }
             $transaction->commit();
             if($result){
@@ -159,6 +175,26 @@ class GoodsController extends BaseController{
         }
         return $result?true:false;
     }
+
+    private function particulars($particulars,$goodsId){
+        $attributeRows = array();
+       foreach($particulars as $k=>$v){
+           if(is_array($v)){
+                foreach($v as $val){
+                 $attributeRows[] = array('goods_id'=>$goodsId,'attribute_id'=>$k,'value'=>$val);
+                }
+           }else{
+                 $attributeRows[] = array('goods_id'=>$goodsId,'attribute_id'=>$k,'value'=>$v);
+           }
+       }
+        foreach($attributeRows as $row){
+            $particularsModel = new Particulars();
+            $particularsModel->setAttributes($row);
+            $result = $particularsModel->save();
+        }
+        return $result?true:false;
+    }
+
     public function actionRemoveImg(){
         $app           =    Yii::$app->request;
         $info          =    $app->bodyParams;

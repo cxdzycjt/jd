@@ -25,7 +25,6 @@ class AttributeController extends BaseController{
             'goodsType'=>$goodsType,
         );
     }
-   // public function actionAttributeRow(){
     public function actionRows(){
         $app = Yii::$app->request;
         $id = $app->get('id');

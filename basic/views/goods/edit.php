@@ -139,6 +139,7 @@
 
             </table>
             <table style="display: none" class="form-table" width="90%" id="general-table" align="center">
+               <thead>
                 <tr>
                     <td class="" style="text-align: right">商品类型：</td>
                     <td class="">
@@ -153,6 +154,10 @@
                 <tr>
                     <td class="" colspan="2"><hr></td>
                 </tr>
+               </thead>
+                <tbody id="goods_attribute">
+
+                </tbody>
             </table>
 
             <table style="display: none" class="form-table" width="90%" id="general-table" align="center">
@@ -309,15 +314,44 @@
             $("#category_text").val(goodsCategoryNode.name);
         }else{
         }
-        /*****商品属性****/
+        /*****商品属性选择****/
         $("#goods\\[goodsType_id\\]").change(function(){
+            $("#goods_attribute").empty();      //每次情况,因为下面是append()会一直追加
             var goodsType_id = $(this).val();
             if(goodsType_id==''){
                 return false;
             }
             $.getJSON('/attribute/rows',{'id':goodsType_id},function(data){
-                console.log(data)
-            })
-        })
-    })
+                var attributeHtml = '';
+                  $(data.message).each(function(){
+                      attributeHtml += "<tr>" +
+                                         "<td style=\"text-align: right\">"+this.name+"</td>" +
+                                         "<td>";
+                        if(this.type==1){
+                            if(this.input_type==1){
+                                attributeHtml +="<input type='text' name='attribute["+this.id+"]'>"
+                            }else if(this.input_type==2){
+                                attributeHtml +="<select name='attribute["+this.id+"]'>";
+                                     $(this.value).each(function(){
+                                          attributeHtml += '<option value="'+this+'">'+this+'</option>';
+                                      });
+
+                                attributeHtml +="</select>";
+                            }else if(this.input_type==3){
+                                attributeHtml +="<textarea name='attribute["+this.id+"]' ></textarea>"
+                            }
+                        }else{
+                           var obj = this;
+                            $(this.value).each(function(){
+                                attributeHtml += '<input type="checkbox" name="attribute['+obj.id+'][]" value="'+this+'">'+this;
+
+                            });
+                        }
+                      attributeHtml +="</td>" +
+                                      "</tr>";
+                  });
+                $("#goods_attribute").append(attributeHtml);
+            });
+        });
+    });
 </script>

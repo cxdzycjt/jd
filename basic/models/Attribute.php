@@ -26,7 +26,7 @@ class Attribute extends ActiveRecord{
     }
     public static function getAttributeList($id){
         $app = Yii::$app->db;
-        $sql = "select * from {{%Attribute}} where status>0";
+        $sql = "select * from {{%Attribute}} where status>0 and goodsType_id='{$id}'";
         $rows = $app->createCommand($sql)->queryAll();
 
         foreach($rows as &$row){
