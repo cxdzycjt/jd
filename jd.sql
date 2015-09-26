@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50520
 File Encoding         : 65001
 
-Date: 2015-09-22 23:37:31
+Date: 2015-09-26 23:49:53
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -24,18 +24,24 @@ CREATE TABLE `jd_attribute` (
   `goodsType_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '商品类型Id',
   `name` varchar(50) NOT NULL DEFAULT '' COMMENT '名称',
   `type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '类型@radio|1=唯一,2=多值',
-  `input_type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '类型@radio|1=手工写入,2=下拉选择,3=多行文本',
+  `input_type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '录入类型@radio|1=手工写入,2=下拉选择,3=多行文本',
   `value` varchar(255) NOT NULL DEFAULT '' COMMENT '备选值@textarea',
   `sort` tinyint(4) NOT NULL DEFAULT '0' COMMENT '排序',
   `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否显示@radio|1=是,0=否',
   `intro` text COMMENT '描述',
   `createTime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '添加时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品属性';
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='商品属性';
 
 -- ----------------------------
 -- Records of jd_attribute
 -- ----------------------------
+INSERT INTO `jd_attribute` VALUES ('4', '1', '华为', '1', '1', 'IOS,Android,WinPhone', '50', '0', '华为', '1443011099');
+INSERT INTO `jd_attribute` VALUES ('5', '1', '操作系统', '1', '2', 'IOS,Android,WinPhone', '0', '1', '操作系统', '1443101685');
+INSERT INTO `jd_attribute` VALUES ('6', '2', '华硕', '2', '2', '笔记本,台式机', '0', '1', '华硕', '1443103446');
+INSERT INTO `jd_attribute` VALUES ('7', '1', '颜色', '2', '2', '白色,红色,黑色', '50', '1', '颜色', '1443103677');
+INSERT INTO `jd_attribute` VALUES ('8', '1', '网络模式', '1', '1', '', '50', '1', '网络模式网络模式', '1443103856');
+INSERT INTO `jd_attribute` VALUES ('9', '1', '尺码', '2', '2', '40,41,42', '50', '1', '尺码', '1443270312');
 
 -- ----------------------------
 -- Table structure for `jd_brand`
@@ -100,6 +106,7 @@ CREATE TABLE `jd_goods` (
   `category_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '分类Id',
   `brand_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '品牌Id',
   `supplier_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '供应商Id',
+  `goodsType_id` int(11) NOT NULL DEFAULT '0' COMMENT '商品类型',
   `market_price` decimal(10,2) unsigned NOT NULL DEFAULT '0.00' COMMENT '市场价',
   `shop_price` decimal(10,2) unsigned NOT NULL DEFAULT '0.00' COMMENT '本店价',
   `store_type` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '库存类型@radio|1=单品,2=多品(多属性统计)',
@@ -110,20 +117,29 @@ CREATE TABLE `jd_goods` (
   `status` tinyint(4) NOT NULL DEFAULT '1' COMMENT '是否删除,0表示删除,1表示正常',
   `createTime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '添加时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COMMENT='商品表';
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COMMENT='商品表';
 
 -- ----------------------------
 -- Records of jd_goods
 -- ----------------------------
-INSERT INTO `jd_goods` VALUES ('1', '测试11', 'SA921030095082439', '/uploads/55ff6da537e56.gif', '3', '6', '6', '222.00', '222.00', '1', '222', '1', '1', '<p>描述2222<br/></p>', '1', '1442826436');
-INSERT INTO `jd_goods` VALUES ('2', '1添加的商品', 'SA921032359962027', '/uploads/55ff6e01004af.jpg', '8', '5', '5', '1.00', '1.00', '1', '1', '1', '1', '<p>2222<br/></p>', '1', '1442803234');
-INSERT INTO `jd_goods` VALUES ('7', '商品', 'SA921159512524788', '/uploads/55ff9fcbd2c2e.jpg', '1', '8', '8', '12.00', '13.00', '1', '15', '1', '1', '<p>商品商品商品</p>', '1', '1442815950');
-INSERT INTO `jd_goods` VALUES ('8', '', 'SA922864405742080', '', '1', '0', '0', '0.00', '0.00', '1', '0', '1', '1', '', '1', '1442886440');
-INSERT INTO `jd_goods` VALUES ('9', '添加商品', 'SA922914828156088', '', '8', '6', '6', '5.00', '5.00', '2', '5', '1', '1', '<p>添加商品添加商品555</p>', '1', '1442891482');
-INSERT INTO `jd_goods` VALUES ('10', '图片', 'SA922916300160272', '/uploads/5600c73f78732.jpg', '4', '22', '22', '22.00', '22.00', '1', '22', '1', '1', '<p>图片<br/></p>', '1', '1442891629');
-INSERT INTO `jd_goods` VALUES ('11', '中级测试', 'SA922917061393723', '', '3', '6', '6', '2.00', '3.00', '1', '3', '1', '1', '<p>中级测试中级测试</p>', '1', '1442891706');
-INSERT INTO `jd_goods` VALUES ('12', '手机', 'SA922103687518188', '/uploads/560110872764a.jpg', '3', '1', '6', '2.00', '2.00', '2', '3', '1', '1', '<p>手机手机手机</p>', '1', '1442910368');
-INSERT INTO `jd_goods` VALUES ('13', '相片', 'SA922111308124002', '/uploads/560113811b157.jpg', '4', '5', '5', '2.00', '3.00', '1', '3', '1', '1', '<p>1111111<br/></p>', '1', '1442911130');
+INSERT INTO `jd_goods` VALUES ('1', '测试11', 'SA921030095082439', '/uploads/55ff6da537e56.gif', '3', '6', '6', '0', '222.00', '222.00', '1', '222', '1', '1', '<p>描述2222<br/></p>', '1', '1442826436');
+INSERT INTO `jd_goods` VALUES ('2', '1添加的商品', 'SA921032359962027', '/uploads/55ff6e01004af.jpg', '8', '5', '5', '0', '1.00', '1.00', '1', '1', '1', '1', '<p>2222<br/></p>', '1', '1442803234');
+INSERT INTO `jd_goods` VALUES ('7', '商品', 'SA921159512524788', '/uploads/55ff9fcbd2c2e.jpg', '1', '8', '8', '0', '12.00', '13.00', '1', '15', '1', '1', '<p>商品商品商品</p>', '1', '1442815950');
+INSERT INTO `jd_goods` VALUES ('8', '', 'SA922864405742080', '', '1', '0', '0', '0', '0.00', '0.00', '1', '0', '1', '1', '', '1', '1442886440');
+INSERT INTO `jd_goods` VALUES ('9', '添加商品', 'SA922914828156088', '', '8', '6', '6', '0', '5.00', '5.00', '2', '5', '1', '1', '<p>添加商品添加商品555</p>', '1', '1442891482');
+INSERT INTO `jd_goods` VALUES ('10', '图片', 'SA922916300160272', '/uploads/5600c73f78732.jpg', '4', '22', '22', '0', '22.00', '22.00', '1', '22', '1', '1', '<p>图片<br/></p>', '1', '1442891629');
+INSERT INTO `jd_goods` VALUES ('11', '中级测试', 'SA922917061393723', '', '3', '6', '6', '0', '2.00', '3.00', '1', '3', '1', '1', '<p>中级测试中级测试</p>', '1', '1442891706');
+INSERT INTO `jd_goods` VALUES ('12', '手机', 'SA922103687518188', '/uploads/560110872764a.jpg', '3', '1', '6', '0', '2.00', '2.00', '2', '3', '1', '1', '<p>手机手机手机</p>', '1', '1442910368');
+INSERT INTO `jd_goods` VALUES ('13', '相片', 'SA922111308124002', '/uploads/560113811b157.jpg', '4', '5', '5', '0', '2.00', '3.00', '1', '3', '1', '1', '<p>1111111<br/></p>', '1', '1442911130');
+INSERT INTO `jd_goods` VALUES ('14', '商品', 'SA923153081364534', '/uploads/5602aa726705f.png', '3', '0', '6', '1', '3.00', '4.00', '1', '4', '1', '1', '', '1', '1443015308');
+INSERT INTO `jd_goods` VALUES ('15', '商品测试', 'SA924044115223014', '', '3', '27', '6', '0', '2.00', '3.00', '1', '4', '1', '1', '', '1', '1443104411');
+INSERT INTO `jd_goods` VALUES ('18', '测试2222', 'SA924054600962805', '', '4', '27', '6', '0', '3.00', '4.00', '1', '5', '1', '1', '', '1', '1443105460');
+INSERT INTO `jd_goods` VALUES ('19', '123', 'SA924054872968388', '', '4', '0', '6', '1', '4.00', '5.00', '1', '6', '1', '1', '', '1', '1443105487');
+INSERT INTO `jd_goods` VALUES ('20', '12', 'SA925825751243284', '', '1', '27', '5', '0', '3.00', '4.00', '1', '4', '1', '1', '', '0', '1443182575');
+INSERT INTO `jd_goods` VALUES ('21', '12', 'SA925825848808831', '', '3', '27', '5', '0', '3.00', '4.00', '1', '4', '1', '1', '', '0', '1443182584');
+INSERT INTO `jd_goods` VALUES ('22', '12', 'SA925825907732105', '', '3', '27', '5', '0', '3.00', '4.00', '1', '4', '1', '1', '', '0', '1443182590');
+INSERT INTO `jd_goods` VALUES ('23', '12', 'SA925826185718049', '', '3', '27', '5', '0', '3.00', '4.00', '1', '4', '1', '1', '', '0', '1443182618');
+INSERT INTO `jd_goods` VALUES ('24', '测试', 'SA925828260556789', '/uploads/560538d5e7d14.png', '4', '27', '6', '1', '4.00', '3.00', '1', '2', '1', '1', '<p>测试测试</p>', '1', '1443182826');
 
 -- ----------------------------
 -- Table structure for `jd_goodsgallery`
@@ -134,7 +150,7 @@ CREATE TABLE `jd_goodsgallery` (
   `goods_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '商品ID',
   `pic` varchar(100) NOT NULL DEFAULT '' COMMENT '图片地址',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COMMENT='商品相册';
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COMMENT='商品相册';
 
 -- ----------------------------
 -- Records of jd_goodsgallery
@@ -147,6 +163,9 @@ INSERT INTO `jd_goodsgallery` VALUES ('14', '2', '/uploads/560112f459155.jpg');
 INSERT INTO `jd_goodsgallery` VALUES ('15', '2', '/uploads/5601134eb2f7e.jpg');
 INSERT INTO `jd_goodsgallery` VALUES ('16', '2', '/uploads/5601134ee7762.jpg');
 INSERT INTO `jd_goodsgallery` VALUES ('17', '13', '/uploads/560113943346b.jpg');
+INSERT INTO `jd_goodsgallery` VALUES ('18', '14', '/uploads/5602aa8a61be2.png');
+INSERT INTO `jd_goodsgallery` VALUES ('19', '15', '/uploads/560406986caca.png');
+INSERT INTO `jd_goodsgallery` VALUES ('20', '24', '/uploads/560538e29152f.png');
 
 -- ----------------------------
 -- Table structure for `jd_goodsmemberprice`
@@ -156,7 +175,7 @@ CREATE TABLE `jd_goodsmemberprice` (
   `goods_id` int(10) unsigned DEFAULT NULL,
   `rank_id` int(10) unsigned DEFAULT NULL,
   `price` decimal(10,2) unsigned DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='会员价格表';
 
 -- ----------------------------
 -- Records of jd_goodsmemberprice
@@ -179,6 +198,18 @@ INSERT INTO `jd_goodsmemberprice` VALUES ('2', '8', '3.00');
 INSERT INTO `jd_goodsmemberprice` VALUES ('13', '6', '22.00');
 INSERT INTO `jd_goodsmemberprice` VALUES ('13', '7', '33.00');
 INSERT INTO `jd_goodsmemberprice` VALUES ('13', '8', '44.00');
+INSERT INTO `jd_goodsmemberprice` VALUES ('14', '6', '12.00');
+INSERT INTO `jd_goodsmemberprice` VALUES ('14', '7', '23.00');
+INSERT INTO `jd_goodsmemberprice` VALUES ('14', '8', '34.00');
+INSERT INTO `jd_goodsmemberprice` VALUES ('15', '6', '4.00');
+INSERT INTO `jd_goodsmemberprice` VALUES ('15', '7', '4.00');
+INSERT INTO `jd_goodsmemberprice` VALUES ('15', '8', '4.00');
+INSERT INTO `jd_goodsmemberprice` VALUES ('18', '6', '3.00');
+INSERT INTO `jd_goodsmemberprice` VALUES ('18', '7', '3.00');
+INSERT INTO `jd_goodsmemberprice` VALUES ('18', '8', '3.00');
+INSERT INTO `jd_goodsmemberprice` VALUES ('24', '6', '1.00');
+INSERT INTO `jd_goodsmemberprice` VALUES ('24', '7', '2.00');
+INSERT INTO `jd_goodsmemberprice` VALUES ('24', '8', '3.00');
 
 -- ----------------------------
 -- Table structure for `jd_goodstype`
@@ -201,6 +232,52 @@ INSERT INTO `jd_goodstype` VALUES ('1', '手机', '50', '1', '手机', '14429290
 INSERT INTO `jd_goodstype` VALUES ('2', '电脑', '50', '1', '电脑', '1442929118');
 INSERT INTO `jd_goodstype` VALUES ('3', '相机', '50', '1', '相机', '1442929129');
 INSERT INTO `jd_goodstype` VALUES ('4', '衣服', '50', '1', '衣服', '1442929140');
+
+-- ----------------------------
+-- Table structure for `jd_particulars`
+-- ----------------------------
+DROP TABLE IF EXISTS `jd_particulars`;
+CREATE TABLE `jd_particulars` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
+  `goods_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '商品Id',
+  `attribute_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '属性Id',
+  `value` varchar(255) NOT NULL DEFAULT '' COMMENT '属性值',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8 COMMENT='货品属性';
+
+-- ----------------------------
+-- Records of jd_particulars
+-- ----------------------------
+INSERT INTO `jd_particulars` VALUES ('9', '14', '5', 'IOS');
+INSERT INTO `jd_particulars` VALUES ('10', '14', '7', '白色');
+INSERT INTO `jd_particulars` VALUES ('11', '14', '7', '红色');
+INSERT INTO `jd_particulars` VALUES ('12', '14', '8', 'CDMA');
+INSERT INTO `jd_particulars` VALUES ('47', '24', '5', 'Android');
+INSERT INTO `jd_particulars` VALUES ('48', '24', '7', '白色');
+INSERT INTO `jd_particulars` VALUES ('49', '24', '7', '红色');
+INSERT INTO `jd_particulars` VALUES ('50', '24', '8', 'CDMA');
+INSERT INTO `jd_particulars` VALUES ('51', '24', '9', '40');
+INSERT INTO `jd_particulars` VALUES ('52', '24', '9', '41');
+
+-- ----------------------------
+-- Table structure for `jd_product`
+-- ----------------------------
+DROP TABLE IF EXISTS `jd_product`;
+CREATE TABLE `jd_product` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
+  `goods_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '商品Id',
+  `goods_attribute_ids` varchar(100) NOT NULL DEFAULT '0' COMMENT '商品组合Id',
+  `price` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '价格',
+  `stock` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '库存',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='产品';
+
+-- ----------------------------
+-- Records of jd_product
+-- ----------------------------
+INSERT INTO `jd_product` VALUES ('5', '24', '48,51', '11.00', '1');
+INSERT INTO `jd_product` VALUES ('6', '24', '48,52', '22.00', '2');
+INSERT INTO `jd_product` VALUES ('7', '24', '49,51', '22.00', '3');
 
 -- ----------------------------
 -- Table structure for `jd_rank`

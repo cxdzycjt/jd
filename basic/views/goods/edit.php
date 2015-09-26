@@ -61,7 +61,7 @@
                             <?php
                             foreach($brand as $barn){
                                 ?>
-                                <option <?php if($barn['id']==$commonData['supplier_id']){echo 'selected';}  ?> value="<?php echo $barn['id']; ?>"><?php echo $barn['name']; ?></option>
+                                <option <?php if($barn['id']==$commonData['brand_id']){echo 'selected';}  ?> value="<?php echo $barn['id']; ?>"><?php echo $barn['name']; ?></option>
                             <?php  }  ?>
                         </select>
                     </td>
@@ -146,7 +146,7 @@
                         <select name="goods[goodsType_id]" id="goods[goodsType_id]">
                             <option value="">-请选择-</option>
                             <?php foreach($goodsType as $type){   ?>
-                                <option value="<?php echo $type['id'];?>"><?php echo $type['name'];?></option>
+                                <option <?php if($commonData['goodsType_id']==$type['id']){echo 'selected';} ?> value="<?php echo $type['id'];?>"><?php echo $type['name'];?></option>
                             <?php  }  ?>
                         </select>
                     </td>
@@ -155,8 +155,32 @@
                     <td class="" colspan="2"><hr></td>
                 </tr>
                </thead>
-                <tbody id="goods_attribute">
-
+                <tbody id="goods_attribute" >
+                    <?php  foreach($attributes as $attribute){  ?>
+                        <tr>
+                            <td style="text-align: right"><?php echo $attribute['name'];?>:</td>
+                            <td>
+                                <?php  if($attribute['type']==1){  ?>
+                                    <?php  if($attribute['input_type']==1){  ?>
+                                        <input type="text" name="attribute[<?php echo $attribute['id']; ?>]" value="<?php echo $GoodsAttributes[$attribute['id']]; ?>" />
+                                    <?php  }elseif($attribute['input_type']==2){ ?>
+                                        <select name="attribute[<?php echo $attribute['id']; ?>]" id="">
+                                            <?php foreach($attribute['value'] as $va){  ?>
+                                              <option <?php if($GoodsAttributes[$attribute['id']]==$va){echo 'selected';} ?> value="<?php echo $va; ?>"><?php echo $va; ?></option>
+                                            <?php }  ?>
+                                        </select>
+                                    <?php  }elseif($attribute['input_type']==3){  ?>
+                                        <textarea name="attribute[<?php echo $attribute['id']; ?>]" id="" cols="30" rows="10"><?php echo $GoodsAttributes[$attribute['id']]; ?></textarea>
+                                    <?php     }  ?>
+                                <?php  }else{ ?>
+                                    <?php foreach($attribute['value'] as $va){  ?>
+                                        <input type="checkbox" <?php foreach($GoodsAttributes[$attribute['id']] as $attr){ if($attr==$va){echo 'checked';}} ?> name="attribute[<?php echo $attribute['id']; ?>][]" value="<?php echo $va; ?>"/>
+                                        <?php echo $va; ?>
+                                    <?php }  ?>
+                                <?php  }  ?>
+                            </td>
+                        </tr>
+                    <?php  }  ?>
                 </tbody>
             </table>
 

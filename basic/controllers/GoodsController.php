@@ -86,6 +86,14 @@ class GoodsController extends BaseController{
             $commonData  = $GoodsModel::find()->where(['id'=>$id])->one();
             $rankPrice   = GoodsMemberPrice::find()->where(['goods_id'=>$id])->all();
             $galleryImg  = GoodsGallery::find()->where(['goods_id'=>$id])->all();
+            //商品属性
+            $attributes = array();
+            $GoodsAttributes = array();
+            if(!empty($id)){
+                $attributes   = Goods::getAttrList($id);
+                //取出当前货品对应属性
+                $GoodsAttributes   = Goods::getGoodsAttrList($id);
+            }
             $view        = Yii::$app->view;
             $view->params['layoutData'] =  $this->title.'列表';
             $view->params['controller'] =  $this->location_url;
@@ -97,9 +105,11 @@ class GoodsController extends BaseController{
                     'brand'     => $data['brand'],
                     'supplier'  => $data['supplier'],
                     'rank'       => $data['rank'],
-                    'goodsType'       => $data['goodsType'],
+                    'goodsType'  => $data['goodsType'],
                     'rankPrice' => $rankPrice,
-                    'galleryImg'=> $galleryImg,
+                    'galleryImg' => $galleryImg,
+                    'attributes' => $attributes,
+                    'GoodsAttributes' =>$GoodsAttributes,
                 ]
             );
         }
@@ -108,10 +118,12 @@ class GoodsController extends BaseController{
     private function GoodsSave($info){
         $GoodsModel =    new Goods();
         $goodsDate = $info['goods'];
+
         $numberPrice = $info['numberPrice'];
         $gallery = isset($info['gallery'])?$info['gallery']:'';
         $attribute = isset($info['attribute'])?$info['attribute']:'';
         $transaction   = Yii::$app->db->beginTransaction();
+        $goodsDate['goodsType_id'] = !empty($goodsDate['goodsType_id'])?$goodsDate['goodsType_id']:0;
         try {
             if(!empty($goodsDate['id'])){
                 $GoodsModel::updateAll($goodsDate,'id=:id',array(':id'=>$goodsDate['id']));
@@ -177,7 +189,8 @@ class GoodsController extends BaseController{
     }
 
     private function particulars($particulars,$goodsId){
-        $attributeRows = array();
+       Particulars::deleteAll(['goods_id'=>$goodsId]);
+       $attributeRows = array();
        foreach($particulars as $k=>$v){
            if(is_array($v)){
                 foreach($v as $val){
@@ -216,7 +229,9 @@ class GoodsController extends BaseController{
         $supplier = Supplier::find()->andWhere(" status > 0 ")->all();
         //会员数据
         $rank  = Rank::find()->andWhere(" status > 0 ")->all();
+        //商品类型
         $goodsType =  GoodsType::find()->select(array('id','name'))->andWhere(" status > 0 ")->orderBy('sort desc')->all();
+
         return array(
             'tree'     => $tree,
             'brand'    => $brand,
