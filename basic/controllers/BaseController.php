@@ -67,16 +67,17 @@ class BaseController extends Controller{
         $supplierModel =    new $model_class();
         $info          =    $app->bodyParams;
         if($app->isPost){
-            $info['createTime'] = time();
-            $supplierModel->setAttributes($info);
             if(!empty($info['id'])){
+                $info['createTime'] = time();
+                $supplierModel->setAttributes($info);
                 if($model_class::updateAll($info,'id=:id',array(':id'=>$info['id']))){
                     Method::exit_json(1,'操作成功','/'.$this->location_url.'/index');
                 }else{
                     Method::exit_json(0,'操作失败');
                 }
             }else{
-                #var_dump($supplierModel->save());die;
+                $info['createTime'] = time();
+                $supplierModel->setAttributes($info);
                 if($supplierModel->save()){
                     $this->_goods_sn($supplierModel->id);
                     Method::exit_json(1,'操作成功','/'.$this->location_url.'/index');

@@ -10,10 +10,32 @@ Target Server Type    : MYSQL
 Target Server Version : 50520
 File Encoding         : 65001
 
-Date: 2015-09-26 23:49:53
+Date: 2015-09-27 23:19:51
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `jd_admin`
+-- ----------------------------
+DROP TABLE IF EXISTS `jd_admin`;
+CREATE TABLE `jd_admin` (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
+  `username` varchar(100) NOT NULL DEFAULT '' COMMENT '用户名',
+  `password` char(32) NOT NULL DEFAULT '' COMMENT '密码',
+  `email` varchar(100) NOT NULL DEFAULT '' COMMENT 'emial',
+  `createTime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '添加时间',
+  `last_login_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '最后登录时间',
+  `last_login_ip` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT '最后登录IP',
+  `auth_key` char(6) NOT NULL DEFAULT '' COMMENT '加密key',
+  `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否显示@radio|1=是,0=否',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='管理员';
+
+-- ----------------------------
+-- Records of jd_admin
+-- ----------------------------
+INSERT INTO `jd_admin` VALUES ('1', 'admin', '761ca5adaf249d2967360367f32e507f', 'admin@admin.com', '1443363774', '0', '0', 'XZAYfW', '1');
 
 -- ----------------------------
 -- Table structure for `jd_attribute`
