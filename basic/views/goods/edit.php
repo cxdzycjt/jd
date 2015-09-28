@@ -209,7 +209,6 @@
             <div class="button-div">
                 <input type="hidden" name="goods[id]" value="<?php echo $commonData['id']; ?>"/>
                 <input type="button" class="button ajax-post" value=" 确定 " />
-                <input type="submit" value=" 确定 " class="button"/>
                 <input type="reset" value=" 重置 " class="button" />
             </div>
         </form>

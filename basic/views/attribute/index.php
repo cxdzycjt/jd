@@ -46,7 +46,7 @@
                     <td align="center"><?php echo $attribute['sort']; ?></td>
                     <td align="center"><?php echo $attribute['intro']; ?></td>
                     <td align="center">
-                        <a class="ajax-get refresh" href="/brand/status/<?php echo $attribute['id']; ?>/<?php echo $attribute['status']; ?>">
+                        <a class="ajax-get refresh" href="/attribute/status/<?php echo $attribute['id']; ?>/<?php echo $attribute['status']; ?>">
                             <img src="/img/<?php echo $attribute['status']; ?>.gif">
                         </a>
                     </td>

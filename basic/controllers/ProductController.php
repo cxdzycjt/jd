@@ -29,13 +29,28 @@ class ProductController extends Controller{
             }
         }else{
             $goods_id = $app->get('id');
-            $productList = Product::getProductList($goods_id);
-            $view = Yii::$app->view;
-            $view->params['layoutData'] = $this->title.'列表';
-            $view->params['controller'] = $this->location_url;
-            $view->params['action']     = 'index';
+            $result= Product::getSelectData($goods_id);
+            if($result){
+                $productList = Product::getProductList($goods_id);
+                $view = Yii::$app->view;
+                $view->params['layoutData'] = $this->title.'列表';
+                $view->params['controller'] = $this->location_url;
+                $view->params['action']     = 'index';
 
-            return $this->render('index',['productList'=>$productList,'goods_id'=>$goods_id,'arrProduct'=>$productList['arrProduct']]);
+                return $this->render('index',['productList'=>$productList,'goods_id'=>$goods_id,'arrProduct'=>$productList['arrProduct']]);
+            }else{
+                Method::exit_json(0,'该商品没有添加商品属性');
+            }
+           }
+    }
+    public function actionAttribute(){
+        $app  = Yii::$app->request;
+        $goods_id = $app->get('id');
+        $result= Product::getSelectData($goods_id);
+        if($result){
+            Method::exit_json(1,'成功选择商品',"/product/index/$goods_id");
+        }else{
+            Method::exit_json(0,'该商品没有添加商品属性');
         }
     }
 }

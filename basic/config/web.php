@@ -18,8 +18,9 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                "<controller:\w+>/<action:\w+>/<id:\d+>"=>"<controller>/<action>",
-                '<controller:\w+>/<action:\w+>/<id:\d+>/<status:\d+>' => '<controller>/<action>',
+                '<controller>/<action>/<id:\d+>'=>'<controller>/<action>',
+                //"<controller:\w+>/<action:\w+>/<id:\d+>"=>"<controller>/<action>",
+                '<controller>/<action>/<id:\d+>/<status:\d+>' => '<controller>/<action>',
             ],
 
         ],

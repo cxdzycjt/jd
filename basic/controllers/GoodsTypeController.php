@@ -14,4 +14,4 @@ class GoodsTypeController extends BaseController{
     protected $model_class  = 'app\models\GoodsType';
     protected $location_url = "goods-type";
     protected $title = '商品类型';
-} 
+}

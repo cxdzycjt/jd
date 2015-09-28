@@ -36,7 +36,6 @@
         <div style="text-align: center">
             <input type="hidden" name="goods_id" value="<?php echo $goods_id?>"/>
             <input type="button" class="button ajax-posts" value=" 确定 " />
-            <input type="submit" value="提交"/>
         </div>
     </div>
 </form>
@@ -47,13 +46,9 @@
          */
         $(".ajax-posts").click(function(){
             //删除时使用ajax和提交表单时使用ajax
-            var target = $(this).attr('href') ||$(this).parents('form').prop('action') ; //得到点击按钮上面的href连接
-
-            var params = $(":checked[name='id[]']").serialize() || $(this).parents('form').serialize();  //得到选中的复选框
+            var target = $(this).attr('href');
+            var params = $(this).parents('form').serialize();  //得到选中的复选框
             var obj = this;
-            console.log(target);
-            console.log(params);
-            return false;
             $.post(target,params,function(data){
                 updateAlert(data,obj);
             },'json');

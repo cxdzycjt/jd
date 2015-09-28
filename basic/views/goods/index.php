@@ -61,7 +61,7 @@
                     <td align="center"><?php echo $goods['status']; ?></td>
                     <td align="center"><span><?php echo $goods['store_num'];?></span></td>
                     <td align="center">
-                        <a href="/product/index/<?php echo $goods['id']; ?>" title="查看列表"><img src="/img/icon_view.gif" width="16" height="16" border="0" /></a>
+                        <a class="J-ajax-get refresh" href="/product/attribute/<?php echo $goods['id']; ?>" title="查看列表"><img src="/img/icon_view.gif" width="16" height="16" border="0" /></a>
                         <a href="/goods/edit/<?php echo $goods['id']; ?>" title="编辑"><img src="/img/icon_edit.gif" width="16" height="16" border="0" /></a>
                         <a class="ajax-get refresh"  href="/goods/del/<?php echo $goods['id']; ?>" title="回收站"><img src="/img/icon_trash.gif" width="16" height="16" border="0" /></a></td>
                 </tr>
@@ -80,3 +80,21 @@
 
     </div>
 </form>
+<script>
+    $(function(){
+
+        $('.J-ajax-get').click(function(){
+            var target = this.href;  //得到a标签上的href地址
+            var obj = this;  //记录a标签对象
+            $.get(target,function(data){
+               if(data.status){
+                    location.href=data.url;
+               }else{
+                   updateAlert(data,obj);
+               }
+            },'json');
+            return false;
+        });
+
+    });
+</script>
