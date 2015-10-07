@@ -19,7 +19,7 @@ class Goods extends ActiveRecord{
     public function rules()
     {
         return [
-            [['name','sn','logo','category_id','brand_id','supplier_id','market_price','shop_price','store_type','store_num','is_on_sale','goods_status','intro','status','createTime'], 'safe'],
+            [['name','sn','logo','category_id','brand_id','supplier_id','market_price','shop_price','store_type','store_num','is_on_sale','goods_status','intro','status','createTime'], 'integer'],
 
         ];
     }

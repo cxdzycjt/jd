@@ -20,7 +20,7 @@ class Category  extends ActiveRecord{
     public function rules()
     {
         return [
-            [['name','parent_id','lft','rght','status','createTime'], 'required'],
+            [['name','parent_id','lft','rght','status','createTime'], 'integer'],
 
         ];
     }

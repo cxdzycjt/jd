@@ -23,7 +23,7 @@ class AdminController extends BaseController{
         $info          =    $app->bodyParams;
 
         if($app->isPost){
-            if($info['password']===$info['repassword']){
+            if(!empty($info['password']) && $info['password']===$info['repassword']){
                 if(!empty($info['id'])){
                     if(empty($info['password'])){
                         unset($info['oldpassword']);
@@ -32,17 +32,19 @@ class AdminController extends BaseController{
                     }else{
                         if(!empty($info['oldpassword'])){
                             $result = Admin::getCheckUser($info['username'],$info['oldpassword']);
-                            if(is_array($result)){
-
-                            }else{
-                               switch($result){
-                                   case -1 : Method::exit_json(-1,'用户名错误'); break;
-                                   case -2 : Method::exit_json(-2,'密码错误'); break;
-                               }
-                               return false;
+                            if($result['status']==-1){
+                                Method::exit_json(0,$result['msg']);
+                            }elseif($result['status']==-2){
+                                Method::exit_json(0,$result['msg']);
                             }
+                        }else{
+                            Method::exit_json(0,'操作失败,11111旧密码不能为空!!');
                         }
                     }
+
+                    unset($info['oldpassword']);
+                    unset($info['repassword']);
+                    $info['password'] = md5($info['password'].$result['auth_key']);
                     $AdminModel->setAttributes($info);
                     if($model_class::updateAll($info,'id=:id',array(':id'=>$info['id']))){
                         Method::exit_json(1,'操作成功','/'.$this->location_url.'/index');

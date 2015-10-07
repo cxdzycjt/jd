@@ -13,10 +13,10 @@
                 <th align="left"><input class="J_check_all"  type="checkbox"/>编号</th>
                 <th>用户名</th>
                 <th>邮箱</th>
+                <th>添加时间</th>
                 <th>最后登录时间</th>
                 <th>最后登录IP</th>
                 <th>状态</th>
-                <th>添加时间</th>
                 <th>操作</th>
             </tr>
             <?php
@@ -26,14 +26,14 @@
                     <td class="first-cell" align="left"><input type="checkbox" name="id[]" value="<?php echo $admin['id']?>"/><?php echo $admin['id']?></td>
                     <td class="first-cell" align="center"><?php echo $admin['username']; ?></td>
                     <td align="center"><?php echo $admin['email']; ?></td>
-                    <td align="center"><?php echo $admin['last_login_time']; ?></td>
-                    <td align="center"><?php echo $admin['last_login_ip']; ?></td>
+                    <td align="center"><?php echo date('Y-m-d H:i:s',$admin['createTime']); ?></td>
+                    <td align="center"><?php echo date('Y-m-d H:i:s',$admin['last_login_time']); ?></td>
+                    <td align="center"><?php echo long2ip($admin['last_login_ip']); ?></td>
                     <td align="center">
                         <a class="ajax-get refresh" href="/admin/status/<?php echo $admin['id']; ?>/<?php echo $admin['status']; ?>">
                             <img src="/img/<?php echo $admin['status']; ?>.gif">
                         </a>
                     </td>
-                    <td align="center"><?php echo date('Y-m-d H:i:s',$admin['createTime']); ?></td>
                     <td align="center">
                         <a href="/admin/edit/<?php echo $admin['id']; ?>" title="编辑">编辑</a> |
                         <a class="ajax-get refresh"  href="/admin/del/<?php echo $admin['id']; ?>" title="移除">移除</a>

@@ -20,7 +20,7 @@ class Supplier extends ActiveRecord{
     public function rules()
     {
         return [
-            [['name','sort','status','intro','createTime'], 'required'],
+            [['name','sort','status','intro','createTime'], 'integer'],
 
         ];
     }

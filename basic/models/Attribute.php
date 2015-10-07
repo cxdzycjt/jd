@@ -20,7 +20,7 @@ class Attribute extends ActiveRecord{
     public function rules()
     {
         return [
-            [['goodsType_id','name','type','input_type','value','sort','status','intro','createTime'], 'required'],
+            [['goodsType_id','name','type','input_type','value','sort','status','intro','createTime'], 'integer'],
 
         ];
     }

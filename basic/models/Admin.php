@@ -46,26 +46,25 @@ class Admin extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'username' => 'Username',
-            'password' => 'Password',
-            'email' => 'Email',
-            'createTime' => 'Create Time',
-            'last_login_time' => 'Last Login Time',
-            'last_login_ip' => 'Last Login Ip',
-            'auth_key' => 'Auth Key',
-            'status' => 'Status',
+            'username' => '管理员姓名',
+            'password' => '管理员密码',
         ];
     }
     /*
      * 公共验证
      */
     public static function getCheckUser($username,$password){
-        $result = Admin::find()->where(['username'=>$username])->all();
-        if(count($result)<1){
-
+        //当前位置需要修改查询方法,暂留
+        $result = Admin::find()->where(['username'=>$username])->one();
+        if(count($result)<=1){
+            $password_auth_key = md5(($password.$result->attributes['auth_key']));
+             if($result->attributes['password']== $password_auth_key){
+                 return array('status'=>1,'auth_key'=>$result->attributes['auth_key']);
+             }else{
+                 return array('status'=>-2,'msg'=>'输入的旧密码不正确!');
+             }
         }else{
-            return -1;
+            return array('status'=>-1,'msg'=>'用户名已经存在!');
         }
     }
 }

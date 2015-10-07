@@ -12,7 +12,7 @@ class LoginForm extends Model
 {
     public $username;
     public $password;
-    public $rememberMe = true;
+   // public $rememberMe = true;
 
     private $_user = false;
 
@@ -24,14 +24,22 @@ class LoginForm extends Model
     {
         return [
             // username and password are both required
-            [['username', 'password'], 'required'],
+            //[['username', 'password'], 'required'],
+            ['username','required','message'=>'用户名必须填写'],
+            ['password','required','message'=>'密码必须填写'],
             // rememberMe must be a boolean value
-            ['rememberMe', 'boolean'],
+           // ['rememberMe', 'boolean'],
             // password is validated by validatePassword()
             ['password', 'validatePassword'],
         ];
     }
-
+    public function attributeLabels()
+    {
+        return [
+            'username' => '管理员姓名:',
+            'password' => '管理员密码:',
+        ];
+    }
     /**
      * Validates the password.
      * This method serves as the inline validation for password.
@@ -45,7 +53,7 @@ class LoginForm extends Model
             $user = $this->getUser();
 
             if (!$user || !$user->validatePassword($this->password)) {
-                $this->addError($attribute, 'Incorrect username or password.');
+                $this->addError($attribute, '用户名或密码错误');
             }
         }
     }

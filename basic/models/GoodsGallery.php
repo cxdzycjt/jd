@@ -19,7 +19,7 @@ class GoodsGallery extends ActiveRecord{
     public function rules()
     {
         return [
-            [['goods_id','pic'], 'required'],
+            [['goods_id','pic'], 'integer'],
 
         ];
     }

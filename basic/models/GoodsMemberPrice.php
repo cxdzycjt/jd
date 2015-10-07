@@ -20,7 +20,7 @@ class GoodsMemberPrice extends ActiveRecord{
     public function rules()
     {
         return [
-            [['goods_id','rank_id','price'], 'required'],
+            [['goods_id','rank_id','price'], 'integer'],
 
         ];
     }

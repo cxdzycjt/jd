@@ -19,7 +19,7 @@ class Rank extends ActiveRecord{
     public function rules()
     {
         return [
-            [['name','score_bottom','score_top','discount','status','createTime'], 'required'],
+            [['name','score_bottom','score_top','discount','status','createTime'], 'integer'],
 
         ];
     }

@@ -20,7 +20,7 @@ class Particulars extends ActiveRecord{
     public function rules()
     {
         return [
-            [['goods_id','attribute_id','value'], 'required'],
+            [['goods_id','attribute_id','value'], 'integer'],
 
         ];
     }

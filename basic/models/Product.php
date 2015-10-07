@@ -20,7 +20,7 @@ class Product extends ActiveRecord{
     public function rules()
     {
         return [
-            [['goods_id','goods_attribute_ids','price','stock'], 'required'],
+            [['goods_id','goods_attribute_ids','price','stock'], 'integer'],
 
         ];
     }
