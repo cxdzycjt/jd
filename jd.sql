@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50520
 File Encoding         : 65001
 
-Date: 2015-09-27 23:19:51
+Date: 2015-10-07 23:09:16
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -30,12 +30,13 @@ CREATE TABLE `jd_admin` (
   `auth_key` char(6) NOT NULL DEFAULT '' COMMENT '加密key',
   `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否显示@radio|1=是,0=否',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='管理员';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='管理员';
 
 -- ----------------------------
 -- Records of jd_admin
 -- ----------------------------
-INSERT INTO `jd_admin` VALUES ('1', 'admin', '761ca5adaf249d2967360367f32e507f', 'admin@admin.com', '1443363774', '0', '0', 'XZAYfW', '1');
+INSERT INTO `jd_admin` VALUES ('3', 'admin', '73c02667951f22e6672ad9240861d5ea', 'admin@admin.com', '1444027029', '1444037735', '2130706433', 'KEwFtc', '1');
+INSERT INTO `jd_admin` VALUES ('5', '26546916', 'c1371e0e948c486ba254cbd00c9e0b19', '26546916@qq.com', '1444037839', '0', '0', 'QSnfgi', '1');
 
 -- ----------------------------
 -- Table structure for `jd_attribute`
@@ -282,6 +283,37 @@ INSERT INTO `jd_particulars` VALUES ('51', '24', '9', '40');
 INSERT INTO `jd_particulars` VALUES ('52', '24', '9', '41');
 
 -- ----------------------------
+-- Table structure for `jd_permission`
+-- ----------------------------
+DROP TABLE IF EXISTS `jd_permission`;
+CREATE TABLE `jd_permission` (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT '编号',
+  `name` varchar(100) NOT NULL DEFAULT '' COMMENT '名称',
+  `url` varchar(100) NOT NULL DEFAULT '' COMMENT 'URL',
+  `parent_id` int(11) NOT NULL DEFAULT '0' COMMENT '父权限',
+  `lft` int(11) NOT NULL DEFAULT '0' COMMENT '左边界',
+  `rght` int(11) NOT NULL DEFAULT '0' COMMENT '右边界',
+  `level` tinyint(4) NOT NULL DEFAULT '0' COMMENT '级别',
+  `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否显示@radio|1=启用,0=禁用',
+  `createTime` int(11) NOT NULL DEFAULT '0' COMMENT '添加时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='权限表';
+
+-- ----------------------------
+-- Records of jd_permission
+-- ----------------------------
+INSERT INTO `jd_permission` VALUES ('2', '最大权限', '', '0', '1', '18', '0', '1', '1444222257');
+INSERT INTO `jd_permission` VALUES ('3', '商品管理', '', '2', '4', '17', '0', '1', '1444223385');
+INSERT INTO `jd_permission` VALUES ('4', '商品列表', '/goods/index', '3', '5', '10', '0', '1', '1444222462');
+INSERT INTO `jd_permission` VALUES ('5', '订单管理', '', '2', '0', '3', '0', '1', '1444222502');
+INSERT INTO `jd_permission` VALUES ('6', '订单列表', '/order/index', '5', '1', '2', '0', '1', '1444222530');
+INSERT INTO `jd_permission` VALUES ('7', '商品分类', '/category/index', '3', '11', '16', '0', '1', '1444223960');
+INSERT INTO `jd_permission` VALUES ('8', '添加修改商品', '/goods/edit', '4', '6', '7', '0', '1', '1444224183');
+INSERT INTO `jd_permission` VALUES ('9', '删除商品', '/goods/del', '4', '8', '9', '0', '1', '1444224281');
+INSERT INTO `jd_permission` VALUES ('10', '添加修改分类', '/category/edit', '7', '12', '13', '0', '1', '1444224337');
+INSERT INTO `jd_permission` VALUES ('11', '删除商品分类', '/category/del', '7', '14', '15', '0', '1', '1444225795');
+
+-- ----------------------------
 -- Table structure for `jd_product`
 -- ----------------------------
 DROP TABLE IF EXISTS `jd_product`;
@@ -322,6 +354,44 @@ CREATE TABLE `jd_rank` (
 INSERT INTO `jd_rank` VALUES ('6', '注册会员', '0', '10000', '100', '1', '1442891394');
 INSERT INTO `jd_rank` VALUES ('7', '中级会员', '10001', '40000', '90', '1', '1442891412');
 INSERT INTO `jd_rank` VALUES ('8', '高级会员', '40001', '100000', '80', '1', '1442891429');
+
+-- ----------------------------
+-- Table structure for `jd_role`
+-- ----------------------------
+DROP TABLE IF EXISTS `jd_role`;
+CREATE TABLE `jd_role` (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT '编号',
+  `name` varchar(100) NOT NULL DEFAULT '' COMMENT '名称',
+  `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否显示@radio|1=启用,0=禁用',
+  `intro` text COMMENT '描述',
+  `createTime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '添加时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COMMENT='角色表';
+
+-- ----------------------------
+-- Records of jd_role
+-- ----------------------------
+INSERT INTO `jd_role` VALUES ('20', '货品管理员', '1', '货品管理员', '1444230283');
+
+-- ----------------------------
+-- Table structure for `jd_rolepermission`
+-- ----------------------------
+DROP TABLE IF EXISTS `jd_rolepermission`;
+CREATE TABLE `jd_rolepermission` (
+  `role_id` tinyint(4) NOT NULL DEFAULT '0' COMMENT '角色ID',
+  `permission_id` tinyint(4) NOT NULL DEFAULT '0' COMMENT '权限ID'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='权限和角色中间表';
+
+-- ----------------------------
+-- Records of jd_rolepermission
+-- ----------------------------
+INSERT INTO `jd_rolepermission` VALUES ('20', '3');
+INSERT INTO `jd_rolepermission` VALUES ('20', '4');
+INSERT INTO `jd_rolepermission` VALUES ('20', '8');
+INSERT INTO `jd_rolepermission` VALUES ('20', '9');
+INSERT INTO `jd_rolepermission` VALUES ('20', '7');
+INSERT INTO `jd_rolepermission` VALUES ('20', '10');
+INSERT INTO `jd_rolepermission` VALUES ('20', '11');
 
 -- ----------------------------
 -- Table structure for `jd_supplier`

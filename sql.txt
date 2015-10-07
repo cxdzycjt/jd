@@ -142,45 +142,52 @@ CREATE TABLE jd_product(
 	stock int UNSIGNED not null default 0 comment '库存' 
 )engine=InnoDB default charset utf8 comment '产品';
 
-SELECT * FROM jd_attribute as jae 
-join jd_particulars as jps one jae.id=jps.attirbute_id 
-where jae.goods_id=24 and jps.type=2
+#12.管理员
+CREATE TABLE jd_admin(
+  id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT 'Id',
+	username varchar(100) not null default '' comment '用户名',
+	password char(32) not null default '' comment '密码',
+	email varchar(100) not null default '' comment 'emial',
+  createTime int UNSIGNED not null default 0 comment '添加时间',
+	last_login_time int UNSIGNED not null default 0 comment '最后登录时间',
+  last_login_ip BIGINT UNSIGNED not null default 0 comment '最后登录IP',
+	auth_key char(6) not null default '' comment '加密key',
+	status tinyint not null default 0 comment '是否显示@radio|1=是,0=否'
+)engine=InnoDB default charset utf8 comment '管理员';
+
+#13.权限表
+CREATE TABLE jd_permission(
+  id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT '编号',
+	name varchar(100) not null default '' comment '名称',
+	url	varchar(100) not null default '' comment 'URL',
+	parent_id int not null default 0 comment '父权限',
+  lft int not null default 0 comment '左边界',
+	rght int not null default 0 comment '右边界',
+  level tinyint not null default 0 comment '级别',
+	status tinyint not null default 0 comment '是否显示@radio|1=启用,0=禁用'
+)engine=InnoDB default charset utf8 comment '权限表';
+
+alter table jd_permission add column createTime int not null default 0 comment '添加时间' 
+
+#14 角色表
+CREATE TABLE jd_role(
+  id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT '编号',
+	name varchar(100) not null default '' comment '名称',
+	status tinyint not null default 0 comment '是否显示@radio|1=启用,0=禁用',
+	intro text comment '描述',
+  createTime int UNSIGNED not null default 0 comment '添加时间'
+)engine=InnoDB default charset utf8 comment '角色表';
+
+#15.权限和角色中间表
+CREATE TABLE jd_rolePermission(
+	role_id tinyint not null default 0 comment '角色ID',
+	permission_id tinyint not null default 0 comment '权限ID',
+  createTime int UNSIGNED not null default 0 comment '添加时间'
+)engine=InnoDB default charset utf8 comment '权限和角色中间表';
 
 
-select jae.name,jae.id from jd_particulars as jps
-JOIN jd_attribute as jae on jps.attribute_id=jae.id
-where jps.goods_id=24 and jae.type=2
-GROUP BY jae.name
-ORDER BY  jae.id 
 
-SELECT CONCAT(t0.id,',',t1.id) as ids,t0.value,t1.value from
-(SELECT id,value from jd_particulars as jps where jps.attribute_id=7 and jps.goods_id=24) as t0,
-(SELECT id,value from jd_particulars as jps where jps.attribute_id=9 and jps.goods_id=24) as t1
-ORDER BY t0.id,t1.id
-
-
-
-select CONCAT(t0.id,',',t1.id) as ids ,t0.value,t1.value from 
-(SELECT id,value from jd_particulars as jps where jps.attribute_id=7 and jps.goods_id=24) as t0,
-(SELECT id,value from jd_particulars as jps where jps.attribute_id=9 and jps.goods_id=24) as t1 
-order by t0.id,t1.id
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+select * from jd_role
 
 
 

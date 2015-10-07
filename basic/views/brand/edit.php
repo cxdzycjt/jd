@@ -24,7 +24,7 @@
             <tr>
                 <td class="label">排序</td>
                 <td>
-                    <input type="text" name="sort" class="sort" maxlength="40" size="15" value="<?php echo $commonData['name']; ?>" />
+                    <input type="text" name="sort" class="sort" maxlength="40" size="15" value="<?php echo $commonData['sort']; ?>" />
                 </td>
             </tr>
             <tr>
@@ -37,7 +37,7 @@
             <tr>
                 <td class="label">品牌描述</td>
                 <td>
-                    <textarea  name="intro" class="intro" cols="60" rows="4"  ><?php echo $commonData['name']; ?></textarea>
+                    <textarea  name="intro" class="intro" cols="60" rows="4"  ><?php echo $commonData['intro']; ?></textarea>
                 </td>
             </tr>
             <tr>

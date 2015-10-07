@@ -17,6 +17,7 @@ use app\models\GoodsType;
 use app\models\Particulars;
 use app\models\Rank;
 use app\models\Supplier;
+use yii\base\Exception;
 use yii;
 use Method;
 use yii\data\Pagination;

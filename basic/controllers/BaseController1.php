@@ -16,6 +16,7 @@ use yii\base\Controller;
 use yii\data\Pagination;
 class BaseController extends Controller{
 
+    public $model_class='app\models\brand';
     public $layout='admin';
     public $sql = 'status>0';
 /*
