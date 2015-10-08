@@ -51,7 +51,7 @@ class Role extends \yii\db\ActiveRecord
     public static function primaryKey(){
         return 'your primary key';
     }
-    public  function getJsonTree($parent_id=false){
+    public static  function getJsonTree($parent_id=false){
         if($parent_id){
             $parent = " AND parent_id>0 ";
         }else{

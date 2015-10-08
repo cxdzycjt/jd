@@ -14,7 +14,7 @@
             <tr>
                 <td class="label">权限:</td>
                 <td>
-                    <input type="hidden" name="permission_ids" id="permission_ids" value="<?php if(!empty($commonData['parent_id'])){echo $commonData['parent_id']; }else{echo 1;} ?>"/>
+                    <input type="hidden" name="permission_ids" id="permission_ids" />
                     <!--生成树状结构的代码-->
                     <ul id="tree" class="ztree"></ul>
                 </td>
@@ -65,7 +65,6 @@
                         checkedId[checkedId.length] = id;   //将选中每一个放到数组中
                     }
                     $('#permission_ids').val(checkedId.join(','));  //将拼接起来的id放到permission_ids 隐藏域中
-
                 }
             }
         };
@@ -73,11 +72,13 @@
         var treeObj =$.fn.zTree.init($("#tree"), setting, zNodes);
         //var treeObj = $.fn.zTree.getZTreeObj("tree"); //参数为id的值,不加#
         treeObj.expandAll(true);            //展开
-        var parent_id = <?php echo  $commonData['permission_id']?$commonData['permission_id']:"''"; ?>;
-        if(parent_id != ''){
-            var parentNode= treeObj.getNodeByParam('id',<?php echo  $commonData['parent_id']?$commonData['parent_id']:"''"; ?>); //根据id(该id是数据库中的)找到指定的节点..
-            treeObj.selectNode(parentNode); //选中找到的节点
-            $("#parent_text").val(parentNode.name);
+        var id = <?php echo  $commonData['id']?$commonData['id']:"''"; ?>;
+        var permission = <?php  echo $role_permission ; ?>;
+        if(id != ''){
+            for(var i= 0,len=permission.length;i<len;++i){
+                var parentNode= treeObj.getNodeByParam('id',permission[i]); //根据id(该id是数据库中的)找到指定的节点..
+                treeObj.checkNode(parentNode,true,false,true); //出发上面onCheck事件
+            }
         }else{
         }
     });

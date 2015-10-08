@@ -38,7 +38,7 @@ class AdminController extends BaseController{
                                 Method::exit_json(0,$result['msg']);
                             }
                         }else{
-                            Method::exit_json(0,'操作失败,11111旧密码不能为空!!');
+                            Method::exit_json(0,'操作失败,旧密码不能为空!!');
                         }
                     }
 

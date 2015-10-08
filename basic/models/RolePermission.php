@@ -44,4 +44,14 @@ class RolePermission extends \yii\db\ActiveRecord
     public static function primaryKey(){
         return 'your primary key';
     }
+    public static function rolePermission($id){
+        $app = Yii::$app->db;
+        $sql = "SELECT permission_id FROM {{%rolePermission}} where role_id='{$id}'";
+        $result = $app->createCommand($sql)->queryAll();
+        $roles = array();
+        foreach($result as $row){
+            $roles[] = $row['permission_id'];
+        }
+        return json_encode($roles);
+    }
 }

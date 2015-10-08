@@ -23,7 +23,9 @@ class LoginController extends Controller{
         if($app->isPost){
             $info  =  $app->bodyParams;
             if(!empty($info['username']) && !empty($info['password'])){
-                $result = Admin::find()->where(['username'=>$info['username']])->one();
+                $username = $info['username'];
+                $sql = "status>0 AND username='$username'";
+                $result = Admin::find()->andWhere($sql)->one();
                 if(!empty($result)){
                     $pass = md5($info['password'].$result->attributes['auth_key']);
                     if($pass == $result->attributes['password']){
@@ -44,7 +46,7 @@ class LoginController extends Controller{
                         Method::exit_json(4,'密码不正确');
                     }
                 }else{
-                    Method::exit_json(3,'用户名不存在');
+                    Method::exit_json(3,'用户名不存在或账户已停用');
                 }
             }else{
                 Method::exit_json(2,'用户名和密码不能为空');
