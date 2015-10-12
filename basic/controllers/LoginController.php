@@ -41,6 +41,7 @@ class LoginController extends Controller{
                             'value' => $result->attributes['id'],
                             'expire'=>time()+3600*24*7,
                         ]));
+                        Admin::getLoginPermission($result->attributes['id']);
                         Method::exit_json(1,'操作成功','/index/index');
                     }else{
                         Method::exit_json(4,'密码不正确');

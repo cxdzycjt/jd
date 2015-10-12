@@ -3,7 +3,6 @@
 namespace app\models;
 
 use Yii;
-
 /**
  * This is the model class for table "jd_admin".
  *
@@ -67,4 +66,31 @@ class Admin extends \yii\db\ActiveRecord
             return array('status'=>-1,'msg'=>'用户名已经存在!');
         }
     }
+
+
+    public static  function getJsonTree($parent_id=false){
+        if($parent_id){
+            $parent = " AND parent_id>0 ";
+        }else{
+            $parent = '';
+        }
+        $app = \Yii::$app->db;
+        $sql = "SELECT id,name,parent_id FROM {{%Permission}} WHERE status>0 {$parent} ORDER BY lft";
+        $result = $app->createCommand($sql)->queryAll();
+        return json_encode($result);
+    }
+
+    public static function getLoginPermission($userId){
+        $app = \Yii::$app->db;
+        $sql = "select p.id,p.name,p.url,p.parent_id,p.level from jd_permission as p
+                where p.id in
+                (select rp.permission_id from jd_adminrole as ar JOIN jd_rolepermission as rp on ar.role_id=rp.role_id where ar.admin_id={$userId})
+                OR p.id in (SELECT ap.permission_id from jd_adminpermission as ap where ap.admin_id={$userId})
+                and status>0 ORDER BY p.lft";
+        $result = $app->createCommand($sql)->queryAll();
+        $session = Yii::$app->session;
+        $session->set('permissions',$result);
+      //  return json_encode($result);
+    }
+
 }

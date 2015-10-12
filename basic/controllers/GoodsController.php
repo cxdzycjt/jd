@@ -26,14 +26,14 @@ class GoodsController extends BaseController{
     protected $model_class  = 'app\models\goods';
     protected $location_url = "goods";
     protected $title         = '商品';
-    protected $sql           = 'where gos.status>0 ';
+   // protected $sql           = 'where gos.status>0 ';
     public function actionIndex(){
         $app     =     Yii::$app->request;
         $name    =    $app->get('name');
         $category_id    =    $app->get('category_id');
         $brand_id    =    $app->get('brand_id');
         $is_on_sale    =    $app->get('is_on_sale');
-        $where   =  $this->sql ;
+        $where   =  'where gos.status>0' ;
         if(!empty($name)){
             $where .= " AND gos.name like '%$name%' ";
         }

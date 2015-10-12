@@ -15,6 +15,7 @@ class IndexController extends Controller{
 
     public function actionIndex(){
         $cookies  = Yii::$app->request->cookies;//注意此处是request
+
         $username = $cookies->get('username');//设置默认值
         $user_id  = $cookies->get('user_id');//设置默认值
         $username = isset($username->value)?$username->value:'';
@@ -23,6 +24,7 @@ class IndexController extends Controller{
     }
 
     public function actionTop(){
+
        return  $this->renderPartial('top');
     }
 
@@ -31,6 +33,23 @@ class IndexController extends Controller{
     }
 
     public function actionMenu(){
-       return  $this->renderPartial('menu');
+       $session = Yii::$app->session;
+       $permissions = $session->get('permissions');
+       $arrper = array();
+       foreach($permissions as $permission){
+          if($permission['level']<4 && $permission['level']>1){
+              $arrper[] = $permission;
+          }
+       }
+       $maxArr = array();
+       $minArr = array();
+       foreach($arrper as $per){
+          if($per['level']==2){
+              $maxArr[] = $per;
+          }else{
+              $minArr[] = $per;
+          }
+       }
+       return  $this->renderPartial('menu',['maxArr'=>$maxArr,'minArr'=>$minArr]);
     }
 } 
